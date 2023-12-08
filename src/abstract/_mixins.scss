@@ -1,0 +1,6 @@
+@mixin text-settings($cl, $fs, $fw, $lh) {
+    color: $cl;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
