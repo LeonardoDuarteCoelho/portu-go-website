@@ -1,4 +1,14 @@
 @use './abstract/root';
+@use './abstract/variables';
+
+.app {
+  background-color: variables.$black;
+  height: 100%;
+  width: 100%;
+  p {
+    color: variables.$white;
+  }
+}
 
 // To rotate the logo:
 /* @media (prefers-reduced-motion: no-preference) {
