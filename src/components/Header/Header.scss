@@ -1,0 +1,13 @@
+@use '../../abstract/root';
+@use '../../abstract/variables';
+@use '../../abstract/mixins';
+
+.body {
+    height: 60px;
+    width: 100%;
+    background: variables.$transparent;
+    img {
+        height: 20px;
+        width: auto;
+    }
+}

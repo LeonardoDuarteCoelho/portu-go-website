@@ -1,9 +1,10 @@
 import './App.scss';
+import Header from './components/Header/Header.js';
 
-function App() {
+const App = () => {
   return (
     <div className="app">
-      <p>Teste</p>
+      <Header />
     </div>
   );
 }
