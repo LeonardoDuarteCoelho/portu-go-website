@@ -3,6 +3,7 @@
 @use '../../abstract/mixins';
 
 .header {
+    position: fixed;
     height: 60px;
     width: 100%;
     padding: 0rem 1.25rem;

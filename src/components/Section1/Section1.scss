@@ -1,0 +1,49 @@
+@use '../../abstract/root';
+@use '../../abstract/variables';
+@use '../../abstract/mixins';
+
+.section-1 {
+    width: 100vw;
+    height: 100vh;
+    padding: 3.75rem 1.25rem 0rem 1.25rem;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.40) 30.73%, rgba(0, 0, 0, 0.80) 66.67%, variables.$black 100%), url('../../../public/images/pexels-andrea-piacquadio-787472.jpg');
+    background-position: 60%; // Center the image
+    background-size: cover; // Cover the entire element
+    background-repeat: no-repeat; // Do not repeat the image
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.section-1__title {
+    @include mixins.text-settings(
+        variables.$white, 
+        variables.$fs_xxl,
+        variables.$fw_bold, 
+        variables.$lh_xxl
+    );
+}
+
+.section-1__text {
+    @include mixins.text-settings(
+        variables.$white, 
+        variables.$fs_ml,
+        variables.$fw_regular, 
+        variables.$lh_ml
+    );
+    span {
+        font-weight: variables.$fw_black;
+    }
+}
+
+.section-1__btn-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    a img {
+        height: auto;
+        width: calc(50vw - 1.25rem);
+        max-width: 200px;
+    }
+}
