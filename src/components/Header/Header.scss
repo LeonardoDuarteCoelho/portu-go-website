@@ -2,12 +2,16 @@
 @use '../../abstract/variables';
 @use '../../abstract/mixins';
 
-.body {
+.header {
     height: 60px;
     width: 100%;
+    padding: 0rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: variables.$transparent;
     img {
-        height: 20px;
-        width: auto;
+        height: auto;
+        width: 110px;
     }
 }

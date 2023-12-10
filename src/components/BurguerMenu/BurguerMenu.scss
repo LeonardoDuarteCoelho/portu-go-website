@@ -1,0 +1,42 @@
+@use '../../abstract/root';
+@use '../../abstract/variables';
+@use '../../abstract/mixins';
+
+.menu-button, .menu-button-open {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+// Class used in all three bars of the menu
+.menu-button-burguer {
+    width: 20px;
+    height: 2px;
+    background: variables.$black;
+    transition: all 0.4s ease-in-out;
+    border-radius: 5px;
+}
+
+// First bar
+.menu-button-open div:nth-child(1) {
+    transform: rotate(45deg) translateY(3.5px) translateX(6px);
+}
+
+// Second bar
+.menu-button-open div:nth-child(2) {
+    transform: translateX(-20px);
+    height: 2px;
+    width: 20px;
+    background: variables.$transparent;
+}
+
+// Third bar
+.menu-button-open div:nth-child(3) {
+    transform: rotate(-45deg) translateY(-3.5px) translateX(6px);
+}
