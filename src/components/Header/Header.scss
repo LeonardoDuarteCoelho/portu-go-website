@@ -2,11 +2,11 @@
 @use '../../abstract/variables';
 @use '../../abstract/mixins';
 
-.header {
+header {
     position: fixed;
     height: 60px;
-    width: 100%;
-    padding: 0rem 1.25rem;
+    width: 100vw;
+    padding: 0rem variables.$space_3;
     display: flex;
     justify-content: space-between;
     align-items: center;

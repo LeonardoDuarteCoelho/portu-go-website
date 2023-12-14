@@ -5,7 +5,7 @@
 .section-1 {
     width: 100vw;
     height: 100vh;
-    padding: 3.75rem 1.25rem 0rem 1.25rem;
+    padding: variables.$space_7 variables.$space_3 0rem variables.$space_3;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.40) 30.73%, rgba(0, 0, 0, 0.80) 66.67%, variables.$black 100%), url('../../../public/images/pexels-andrea-piacquadio-787472.jpg');
     background-position: 60%; // Center the image
     background-size: cover; // Cover the entire element
@@ -38,12 +38,5 @@
 }
 
 .section-1__btn-container {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    a img {
-        height: auto;
-        width: calc(50vw - 1.25rem);
-        max-width: 200px;
-    }
+    @include mixins.download-app-btn-container-config;
 }

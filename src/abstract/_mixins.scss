@@ -1,6 +1,19 @@
+@use './variables';
+
 @mixin text-settings($cl, $fs, $fw, $lh) {
     color: $cl;
     font-size: $fs;
     font-weight: $fw;
     line-height: $lh;
+}
+
+@mixin download-app-btn-container-config {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    a img {
+        height: auto;
+        width: calc(50vw - variables.$space_3);
+        max-width: 200px;
+    }
 }

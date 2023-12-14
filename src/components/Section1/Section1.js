@@ -1,12 +1,11 @@
 import './Section1.scss';
 import React from 'react';
 
-const Section1 = () => {
-
+const Section1 = ({ title }) => {
     return(
         <section className="section-1">
             <h1 className='section-1__title'>
-                Rápido, fácil e justo
+                {title}
             </h1>
             <p className='section-1__text'>
                 <span>PortuGO</span> é uma aplicação de transporte urbano adaptada para suas necessidades. 

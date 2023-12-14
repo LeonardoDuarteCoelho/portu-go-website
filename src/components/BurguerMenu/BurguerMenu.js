@@ -11,7 +11,7 @@ const BurguerMenu = () => {
     }
 
     return(
-        <div className={isOpen ? 'menu-button' : 'menu-button-open'} onClick={() => setOpenedState()}>
+        <div className={isOpen ? 'menu-button-open' : 'menu-button'} onClick={() => setOpenedState()}>
             <div className='menu-button-burguer' />
             <div className='menu-button-burguer' />
             <div className='menu-button-burguer' />

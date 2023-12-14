@@ -23,20 +23,20 @@
     border-radius: 5px;
 }
 
-// First bar
-.menu-button-open div:nth-child(1) {
-    transform: rotate(45deg) translateY(3.5px) translateX(6px);
-}
-
-// Second bar
-.menu-button-open div:nth-child(2) {
-    transform: translateX(-20px);
-    height: 2px;
-    width: 20px;
-    background: variables.$transparent;
-}
-
-// Third bar
-.menu-button-open div:nth-child(3) {
-    transform: rotate(-45deg) translateY(-3.5px) translateX(6px);
+.menu-button-open {
+    // First bar
+    div:nth-child(1) {
+        transform: rotate(45deg) translateY(3.5px) translateX(6px);
+    }
+    // Second bar
+    div:nth-child(2) {
+        transform: translateX(-20px);
+        height: 2px;
+        width: 20px;
+        background: variables.$transparent;
+    }
+    // Third bar
+    div:nth-child(3) {
+        transform: rotate(-45deg) translateY(-3.5px) translateX(6px);
+    }
 }

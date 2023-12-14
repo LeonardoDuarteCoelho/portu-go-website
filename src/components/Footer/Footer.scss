@@ -1,0 +1,90 @@
+@use '../../abstract/root';
+@use '../../abstract/variables';
+@use '../../abstract/mixins';
+
+footer {
+    height: 100vh;
+    width: 100vw;
+
+    .footer__div-1 {
+        height: 80%;
+        background-color: variables.$gray_2;
+        padding: variables.$space_4 variables.$space_3 0rem variables.$space_3;
+
+        .footer__div-1__social-medias {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .footer__div-1__navigation-map {
+            ul {
+                margin: variables.$space_4 0rem;
+                list-style-type: none;
+                li:first-child {
+                    @include mixins.text-settings(
+                        variables.$gray_9, 
+                        variables.$fs_m, 
+                        variables.$fw_bold, 
+                        variables.$lh_m 
+                    );
+                    margin-bottom: variables.$space_2;
+                }
+                li {
+                    @include mixins.text-settings(
+                        variables.$gray_9, 
+                        variables.$fs_m, 
+                        variables.$fw_light, 
+                        variables.$lh_m
+                    );
+                    margin-bottom: variables.$space_1;
+                }
+            }
+        }
+
+        .footer__div-1__btn-container {
+            @include mixins.download-app-btn-container-config;
+        }
+    }
+
+    .footer__div-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 20%;
+        background-color: variables.$gray_4;
+        padding: variables.$space_3 variables.$space_3 0rem variables.$space_3;
+
+        .footer__div-2__logos-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            img {
+                object-fit: scale-down;
+                height: auto;
+                width: 40%;
+                max-width: 200px;
+                height: fit-content;
+            }
+        }
+
+        .footer__div-2__copyright-text {
+            p {
+                @include mixins.text-settings(
+                    variables.$gray_9, 
+                    variables.$fs_sm, 
+                    variables.$fw_regular, 
+                    variables.$lh_sm
+                );
+                text-align: center;
+            }
+        }
+
+        .footer__div-2__copyright-img {
+            object-fit: scale-down;
+            height: auto;
+            width: 100px;
+        }
+    }
+}
+

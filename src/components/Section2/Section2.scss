@@ -1,0 +1,38 @@
+@use '../../abstract/root';
+@use '../../abstract/variables';
+@use '../../abstract/mixins';
+
+@mixin padding-horizontal {
+    padding: 0rem variables.$space_3;
+}
+
+.section-2 {
+    padding-top: variables.$space_4;
+    margin-bottom: -4px; // Correcting white pixels at the bottom of the section
+    h1 {
+        @include mixins.text-settings(
+            variables.$gray_9, 
+            variables.$fs_xl,
+            variables.$fw_bold, 
+            variables.$lh_xl
+        );
+        margin-bottom: variables.$space_3;
+        @include padding-horizontal;
+    }
+    p {
+        @include mixins.text-settings(
+            variables.$gray_7, 
+            variables.$fs_m,
+            variables.$fw_regular, 
+            variables.$lh_m
+        );
+        margin-bottom: variables.$space_2;
+        @include padding-horizontal;
+    }
+    img {
+        margin-top: variables.$space_3;
+        object-fit: cover;
+        height: 300px;
+        width: 100vw;
+    }
+}
