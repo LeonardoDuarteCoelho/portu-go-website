@@ -1,0 +1,57 @@
+@use '../../abstract/root';
+@use '../../abstract/variables';
+@use '../../abstract/mixins';
+
+.section-3 {
+    padding: variables.$space_4 variables.$space_3;
+    .section-3__title {
+        @include mixins.text-settings(
+            variables.$gray_9, 
+            variables.$fs_xl,
+            variables.$fw_bold, 
+            variables.$lh_xl
+        );
+        margin-bottom: variables.$space_4;
+    }
+
+    .section-3__benefits-div {
+        margin-top: variables.$space_3;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "image text text";
+        grid-column-gap: variables.$space_2;
+        justify-items: center;
+        align-items: center;
+
+        .section-3__benefits-div__img {
+            grid-area: image;
+        }
+
+        .section-3__benefits-div__text-div {
+            grid-area: text;         
+            h2 {
+                padding-bottom: 0.625rem;
+                @include mixins.text-settings(
+                    variables.$indigo_7, 
+                    variables.$fs_l,
+                    variables.$fw_bold, 
+                    variables.$lh_l
+                );
+            }
+
+            p {
+                @include mixins.text-settings(
+                    variables.$gray_7, 
+                    variables.$fs_sm,
+                    variables.$fw_light, 
+                    variables.$lh_s
+                );
+            }
+        }
+        
+        &:nth-child(even) {
+            grid-template-areas: "text text image";
+            text-align: end;
+        }
+    }
+}

@@ -3,6 +3,8 @@ import Footer from './components/Footer/Footer.js';
 import Header from './components/Header/Header.js';
 import Section1 from './components/Section1/Section1.js';
 import Section2 from './components/Section2/Section2.js';
+import Section3 from './components/Section3/Section3.js';
+import Section4 from './components/Section4/Section4.js';
 
 const App = () => {
   return (
@@ -15,6 +17,12 @@ const App = () => {
         title={'Quem somos nós?'}
         imgSrc={'images/pexels-element-digital-1051071.jpg'}
         imgName={'Mulher a conduzir'}
+      />
+      <Section3 
+        title={'Conduza e seja seu próprio patrão!'}
+      />
+      <Section4
+        title={'Nossos resultados:'}
       />
       <Footer />
     </div>

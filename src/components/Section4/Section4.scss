@@ -1,0 +1,16 @@
+@use '../../abstract/root';
+@use '../../abstract/variables';
+@use '../../abstract/mixins';
+
+.section-4 {
+    padding: variables.$space_4 variables.$space_3;
+    .section-4__title {
+        @include mixins.text-settings(
+            variables.$gray_9, 
+            variables.$fs_xl,
+            variables.$fw_bold, 
+            variables.$lh_xl
+        );
+        text-align: center;
+    }
+}
