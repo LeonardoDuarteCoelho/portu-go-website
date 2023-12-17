@@ -4,6 +4,7 @@
 
 .section-3 {
     padding: variables.$space_4 variables.$space_3;
+
     .section-3__title {
         @include mixins.text-settings(
             variables.$gray_9, 
@@ -28,7 +29,8 @@
         }
 
         .section-3__benefits-div__text-div {
-            grid-area: text;         
+            grid-area: text;  
+                  
             h2 {
                 padding-bottom: 0.625rem;
                 @include mixins.text-settings(
