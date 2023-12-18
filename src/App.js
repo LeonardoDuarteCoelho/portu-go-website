@@ -5,6 +5,7 @@ import Section1 from './components/Section1/Section1.js';
 import Section2 from './components/Section2/Section2.js';
 import Section3 from './components/Section3/Section3.js';
 import Section4 from './components/Section4/Section4.js';
+import Section5 from './components/Section5/Section5.js';
 
 const App = () => {
   return (
@@ -23,6 +24,9 @@ const App = () => {
       />
       <Section4
         title={'Nossos resultados:'}
+      />
+      <Section5 
+        title={'Operamos em todo Portugal'}
       />
       <Footer />
     </div>

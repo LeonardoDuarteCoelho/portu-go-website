@@ -17,9 +17,11 @@ footer {
         }
 
         .footer__div-1__navigation-map {
+            
             ul {
                 margin: variables.$space_4 0rem;
                 list-style-type: none;
+
                 li:first-child {
                     @include mixins.text-settings(
                         variables.$gray_9, 
@@ -29,6 +31,7 @@ footer {
                     );
                     margin-bottom: variables.$space_2;
                 }
+
                 li {
                     @include mixins.text-settings(
                         variables.$gray_9, 
@@ -59,6 +62,7 @@ footer {
             display: flex;
             justify-content: space-around;
             width: 100%;
+
             img {
                 object-fit: scale-down;
                 height: auto;
@@ -68,16 +72,14 @@ footer {
             }
         }
 
-        .footer__div-2__copyright-text {
-            p {
-                @include mixins.text-settings(
-                    variables.$gray_9, 
-                    variables.$fs_sm, 
-                    variables.$fw_regular, 
-                    variables.$lh_sm
-                );
-                text-align: center;
-            }
+        .footer__div-2__copyright-text p {
+            @include mixins.text-settings(
+                variables.$gray_9, 
+                variables.$fs_sm, 
+                variables.$fw_regular, 
+                variables.$lh_sm
+            );
+            text-align: center;
         }
 
         .footer__div-2__copyright-img {

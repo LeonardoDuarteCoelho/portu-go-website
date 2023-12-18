@@ -10,8 +10,10 @@ const Section3 = ({ title }) => {
                 </svg>
                 <div class="section-3__benefits-div__text-div">
                     <h2>Decida sua jornada</h2>
-                    <p>És livre para decidir seu horário de trabalho. Seja pela manhã, tarde ou noite, 
-                    deixamos que você tenha autonomia completa para conduzir em nossa app a qualquer hora.</p>
+                    <p>
+                        És livre para decidir seu horário de trabalho. Seja pela manhã, tarde ou noite, 
+                        deixamos que você tenha autonomia completa para conduzir em nossa app a qualquer hora.
+                    </p>
                 </div>
             </div>
             <div class="section-3__benefits-div">

@@ -1,0 +1,39 @@
+@use '../../abstract/root';
+@use '../../abstract/variables';
+@use '../../abstract/mixins';
+
+.section-5 {
+    padding: variables.$space_4 variables.$space_2;
+
+    .section-5__title {
+        @include mixins.text-settings(
+            variables.$gray_9, 
+            variables.$fs_xl,
+            variables.$fw_bold, 
+            variables.$lh_xl
+        );
+        text-align: center;
+        margin-bottom: variables.$space_4;
+        padding: 0 variables.$space_2;
+    }
+
+    .section-5__div {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .section-5__div__img {
+            width: 40%;
+        }
+
+        .section-5__div__text {
+            width: 40%;
+            @include mixins.text-settings(
+                variables.$gray_7, 
+                variables.$fs_m,
+                variables.$fw_regular, 
+                variables.$lh_m
+            );
+        }
+    }
+}
