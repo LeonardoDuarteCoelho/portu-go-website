@@ -3,7 +3,12 @@
 @use '../../abstract/mixins';
 
 .section-3 {
-    padding: variables.$space_4 variables.$space_3;
+    @include mixins.padding(
+        variables.$space_4,
+        variables.$space_3,
+        variables.$space_4,
+        variables.$space_3
+    );
 
     .section-3__title {
         @include mixins.text-settings(

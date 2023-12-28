@@ -17,3 +17,31 @@
         max-width: 200px;
     }
 }
+
+@mixin padding($pad_top, $pad_right, $pad_bottom, $pad_left) {
+    padding: $pad_top $pad_right $pad_bottom $pad_left;
+}
+
+@mixin padding-horizontal($pad_left, $pad_right) {
+    padding-left: $pad_left;
+    padding-right: $pad_right;
+}
+
+@mixin padding-vertical($pad_top, $pad_bottom) {
+    padding-top: $pad_top;
+    padding-bottom: $pad_bottom;
+}
+
+@mixin margin($marg_top, $marg_right, $marg_bottom, $marg_left) {
+    margin: $marg_top $marg_right $marg_bottom $marg_left;
+}
+
+@mixin margin-horizontal($marg_left, $marg_right) {
+    margin-left: $marg_left;
+    margin-right: $marg_right;
+}
+
+@mixin margin-vertical($marg_top, $marg_bottom) {
+    margin-top: $marg_top;
+    margin-bottom: $marg_bottom;
+}

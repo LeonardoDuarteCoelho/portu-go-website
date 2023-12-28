@@ -3,9 +3,14 @@
 @use '../../abstract/mixins';
 
 .section-1 {
+    @include mixins.padding(
+        variables.$space_7,
+        variables.$space_3,
+        0,
+        variables.$space_3
+    );
     width: 100vw;
     height: 100vh;
-    padding: variables.$space_7 variables.$space_3 0rem variables.$space_3;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.40) 30.73%, rgba(0, 0, 0, 0.80) 66.67%, variables.$black 100%), url('../../../public/images/pexels-andrea-piacquadio-787472.jpg');
     background-position: 60%; // Center the image
     background-size: cover; // Cover the entire element

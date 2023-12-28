@@ -3,7 +3,12 @@
 @use '../../abstract/mixins';
 
 .section-4 {
-    padding: variables.$space_4 variables.$space_2 0 variables.$space_2;
+    @include mixins.padding(
+        variables.$space_4, 
+        variables.$space_2,
+        0, 
+        variables.$space_2
+    );
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,7 +43,7 @@
 
             h5 {
                 @include mixins.text-settings(
-                    variables.$gray_9,
+                    variables.$indigo_7,
                     variables.$fs_l,
                     variables.$fw_bold,
                     variables.$lh_l

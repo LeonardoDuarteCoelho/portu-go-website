@@ -3,7 +3,12 @@
 @use '../../abstract/mixins';
 
 .section-5 {
-    padding: variables.$space_4 variables.$space_2;
+    @include mixins.padding(
+        variables.$space_4, 
+        variables.$space_2,
+        variables.$space_4, 
+        variables.$space_2
+    );
 
     .section-5__title {
         @include mixins.text-settings(
@@ -12,9 +17,9 @@
             variables.$fw_bold, 
             variables.$lh_xl
         );
+        @include mixins.padding-horizontal(variables.$space_2, variables.$space_2);
         text-align: center;
         margin-bottom: variables.$space_4;
-        padding: 0 variables.$space_2;
     }
 
     .section-5__div {
@@ -27,13 +32,13 @@
         }
 
         .section-5__div__text {
-            width: 40%;
             @include mixins.text-settings(
                 variables.$gray_7, 
                 variables.$fs_m,
                 variables.$fw_regular, 
                 variables.$lh_m
             );
+            width: 40%;
         }
     }
 }

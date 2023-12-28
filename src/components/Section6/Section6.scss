@@ -1,0 +1,41 @@
+@use '../../abstract/root';
+@use '../../abstract/variables';
+@use '../../abstract/mixins';
+
+.section-6 {
+    @include mixins.padding(
+        variables.$space_4, 
+        variables.$space_3,
+        0, 
+        variables.$space_3
+    );
+    background-color: variables.$indigo_7;
+    margin-bottom: -4px; // Correcting the space at the bottom of the section
+
+    .section-6__title {
+        @include mixins.text-settings(
+            variables.$white, 
+            variables.$fs_xl,
+            variables.$fw_light, 
+            variables.$lh_xl
+        );
+        text-align: center;
+
+        span {
+            @include mixins.text-settings(
+                variables.$white, 
+                variables.$fs_xl,
+                variables.$fw_bold, 
+                variables.$lh_xl
+            );
+        }
+    }
+
+    .section-6__div {
+
+        .section-6__div__img {
+            width: 50%;
+        }
+    }
+
+}

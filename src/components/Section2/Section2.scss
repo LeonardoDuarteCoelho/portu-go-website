@@ -2,13 +2,9 @@
 @use '../../abstract/variables';
 @use '../../abstract/mixins';
 
-@mixin padding-horizontal {
-    padding: 0rem variables.$space_3;
-}
-
 .section-2 {
     padding-top: variables.$space_4;
-    margin-bottom: -4px; // Correcting white pixels at the bottom of the section
+    margin-bottom: -4px; // Correcting the space at the bottom of the section
    
     .section-2__title {
         @include mixins.text-settings(
@@ -17,8 +13,8 @@
             variables.$fw_bold, 
             variables.$lh_xl
         );
+        @include mixins.padding-horizontal(variables.$space_3, variables.$space_3);
         margin-bottom: variables.$space_4;
-        @include padding-horizontal;
         text-align: center;
     }
 
@@ -29,8 +25,8 @@
             variables.$fw_regular, 
             variables.$lh_m
         );
+        @include mixins.padding-horizontal(variables.$space_3, variables.$space_3);
         margin-bottom: variables.$space_2;
-        @include padding-horizontal;
     }
     
     .section-2__img {
