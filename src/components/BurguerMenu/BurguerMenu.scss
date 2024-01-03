@@ -11,7 +11,6 @@
     width: 30px;
     height: 25px;
     cursor: pointer;
-    transition: all 0.4s ease-in-out;
 }
 
 // Class used in all three bars of the menu
@@ -19,8 +18,16 @@
     width: 20px;
     height: 2px;
     background: variables.$black;
-    transition: all 0.4s ease-in-out;
     border-radius: 5px;
+    transition: transform 0.4s;
+}
+
+.menu-button-burguer--white {
+    background: variables.$white;
+}
+
+.menu-button-burguer--black {
+    background: variables.$black;
 }
 
 .menu-button-open {

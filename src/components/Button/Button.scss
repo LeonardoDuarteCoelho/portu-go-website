@@ -10,9 +10,25 @@
         variables.$space_2
     );
     border: 3px solid;
-    width: 150px;
+    max-width: 175px;
     border-radius: 1000rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
+    .btn__icon {
+        margin-right: variables.$space_2;
+        height: 32px;
+    }
+    .btn__text {
+        word-break: break-word;
+        text-align: left;
+    }
+}
+
+.btn--style-1 {
+    border-color: variables.$indigo_7;
+    background-color: variables.$transparent;
     .btn__text {
         @include mixins.text-settings(
             variables.$gray_9,
@@ -20,15 +36,44 @@
             variables.$fw_bold,
             variables.$lh_s
         );
-        overflow-wrap: break-word;
     }
 }
 
-.btn--style-1 {
-    border-color: variables.$indigo_7;
-    background-color: variables.$transparent;
-}
 .btn--style-2 {
+    border-color: variables.$white;
+    background-color: variables.$white;
+    .btn__text {
+        @include mixins.text-settings(
+            variables.$gray_9,
+            variables.$fs_m,
+            variables.$fw_medium,
+            variables.$lh_s
+        );
+    }
+}
+
+.btn--style-3 {
+    border-color: variables.$white;
+    background-color: variables.$white;
+    .btn__text {
+        @include mixins.text-settings(
+            variables.$gray_9,
+            variables.$fs_m,
+            variables.$fw_medium,
+            variables.$lh_s
+        );
+    }
+}
+
+.btn--style-4 {
     border-color: variables.$indigo_7;
-    background-color: variables.$transparent;
+    background-color: variables.$indigo_7;
+    .btn__text {
+        @include mixins.text-settings(
+            variables.$white,
+            variables.$fs_m,
+            variables.$fw_medium,
+            variables.$lh_s
+        );
+    }
 }

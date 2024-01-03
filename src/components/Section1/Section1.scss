@@ -33,8 +33,8 @@
         @include mixins.text-settings(
             variables.$white, 
             variables.$fs_ml,
-            variables.$fw_regular, 
-            variables.$lh_ml
+            variables.$fw_light, 
+            variables.$lh_l
         );
         
         span {

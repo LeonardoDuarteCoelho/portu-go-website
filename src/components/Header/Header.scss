@@ -2,16 +2,34 @@
 @use '../../abstract/variables';
 @use '../../abstract/mixins';
 
-header {
+.header {
     position: fixed;
+    z-index: 100; // Making sure the header is above other content
+    transition-delay: 0.4s;
+    transition: all 0.4s ease-in-out;
     height: 60px;
     width: 100vw;
     padding: 0rem variables.$space_3;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: variables.$transparent;
+}
+
+.header-scrolling {
+    @extend .header;
+    background: variables.$indigo_7;
     
+    img {
+        height: auto;
+        width: 110px;
+    }
+}
+
+// The class that will slide the header out of view
+.header-top {
+    @extend .header;
+    background: variables.$transparent;
+
     img {
         height: auto;
         width: 110px;

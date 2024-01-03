@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './BurguerMenu.scss';
 
-const BurguerMenu = () => {
+const BurguerMenu = ({ color }) => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -12,9 +12,9 @@ const BurguerMenu = () => {
 
     return(
         <div className={isOpen ? 'menu-button-open' : 'menu-button'} onClick={() => setOpenedState()}>
-            <div className='menu-button-burguer' />
-            <div className='menu-button-burguer' />
-            <div className='menu-button-burguer' />
+            <div className={'menu-button-burguer ' + color} />
+            <div className={'menu-button-burguer ' + color} />
+            <div className={'menu-button-burguer ' + color} />
         </div>
     )
 }

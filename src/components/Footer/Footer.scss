@@ -36,7 +36,7 @@ footer {
                     @include mixins.text-settings(
                         variables.$gray_9, 
                         variables.$fs_m, 
-                        variables.$fw_light, 
+                        variables.$fw_regular, 
                         variables.$lh_m
                     );
                     margin-bottom: variables.$space_1;

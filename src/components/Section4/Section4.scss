@@ -52,11 +52,11 @@
 
             h6 {
                 @include mixins.text-settings(
-                    variables.$gray_9,
+                    variables.$gray_9, 
                     variables.$fs_m,
-                    variables.$fw_regular,
+                    variables.$fw_regular, 
                     variables.$lh_m
-                ); 
+                );
             }
         }
 

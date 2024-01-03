@@ -3,14 +3,8 @@
 @use '../../abstract/mixins';
 
 .section-6 {
-    @include mixins.padding(
-        variables.$space_4, 
-        variables.$space_3,
-        0, 
-        variables.$space_3
-    );
+    padding-top: variables.$space_4;
     background-color: variables.$indigo_7;
-    margin-bottom: -4px; // Correcting the space at the bottom of the section
 
     .section-6__title {
         @include mixins.text-settings(
@@ -31,10 +25,24 @@
         }
     }
 
-    .section-6__div {
+    .section-6__main-div {
+        @include mixins.padding(variables.$space_4, variables.$space_3, 0, variables.$space_3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: variables.$space_1;
+        row-gap: variables.$space_5;
 
-        .section-6__div__img {
-            width: 50%;
+        .section-6__main-div__buttons-div {
+            display: flex;
+            flex-direction: column;
+            row-gap: variables.$space_3;
+            padding-bottom: variables.$space_3;
+        }
+        .section-6__main-div__img {
+            width: 70%;
+            align-self: flex-end;
         }
     }
 

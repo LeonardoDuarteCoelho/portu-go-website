@@ -51,8 +51,8 @@
                 @include mixins.text-settings(
                     variables.$gray_7, 
                     variables.$fs_sm,
-                    variables.$fw_light, 
-                    variables.$lh_s
+                    variables.$fw_regular, 
+                    variables.$lh_sm
                 );
             }
         }
