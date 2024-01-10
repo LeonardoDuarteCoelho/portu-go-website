@@ -9,6 +9,7 @@ import Section5 from './components/Section5/Section5.js';
 import Section6 from './components/Section6/Section6.js';
 import Section7 from './components/Section7/Section7.js';
 
+
 const App = () => {
   return (
     <div className='app'>
