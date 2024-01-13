@@ -1,6 +1,7 @@
 import './Header.scss';
 import BurguerMenu from '../BurguerMenu/BurguerMenu.js';
 import React, { useEffect, useRef, useState } from 'react';
+import Button from '../Button/Button.js';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false); // Check if the burguer menu is open or closed
@@ -28,6 +29,8 @@ const Header = () => {
     const handleScroll = () => {
         const currentScrollY = window.scrollY;
 
+        // Only enables the responsive scrolling when navigation menu is off
+        if (!isMenuOpen) { 
             if (currentScrollY > lastScrollY) {
                 // Scrolling down
                 headerRef.current.style.top = `-${headerRef.current.offsetHeight}px`;
@@ -47,6 +50,7 @@ const Header = () => {
                     headerRef.current.style.top = '0px';
                 }
             }
+        }
         setLastScrollY(currentScrollY);
     }
   
@@ -56,12 +60,15 @@ const Header = () => {
             return () => {
                 window.removeEventListener('scroll', handleScroll);
             };
-    }, [cumulativeUpScroll, lastScrollY])
+    },  [cumulativeUpScroll, lastScrollY, isMenuOpen])
 
     return (
-        <header ref={headerRef} className={headerStyle}>
-            <img src={logo} alt='Logo da PortuGO' />
-            <BurguerMenu color={hamburguerColor} onToggle={toggleMenu} />
+        <header className={headerStyle} ref={headerRef}>
+            <img className='header__logo' src={logo} alt='Logo da PortuGO' />
+            <div className='header__btns-container'>
+                <Button styleType={'btn--style-2'} text={'Inscreva-se'} icon={''}/>
+                <BurguerMenu className='header__btns-container__burguer-menu' color={hamburguerColor} onToggle={toggleMenu} />
+            </div>
         </header>
     );
 };

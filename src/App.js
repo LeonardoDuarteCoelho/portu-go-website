@@ -32,10 +32,10 @@ const App = () => {
       <Section5 
         title={'Operamos em todo Portugal'}
       />
+      <Section6 />
       <Section7
         title={'Entre em contacto conosco'}
       />
-      <Section6 />
       <Footer />
     </div>
   );

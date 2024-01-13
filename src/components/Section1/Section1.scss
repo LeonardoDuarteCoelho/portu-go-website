@@ -34,9 +34,9 @@
             variables.$white, 
             variables.$fs_ml,
             variables.$fw_light, 
-            variables.$lh_l
+            variables.$lh_ml
         );
-        
+      
         span {
             font-weight: variables.$fw_black;
         }
@@ -44,5 +44,35 @@
     
     .section-1__btn-container {
         @include mixins.download-app-btn-container-config;
+    }
+}
+
+// ---------------------------------- TABLET SCREEN ---------------------------------- //
+@media (min-width: 425px) {
+    .section-1 {
+        @include mixins.padding(
+            variables.$tablet_space_7 !important,
+            variables.$tablet_space_3 !important,
+            0,
+            variables.$tablet_space_3 !important
+        );
+
+        .section-1__title {
+            @include mixins.text-settings(
+                variables.$white, 
+                variables.$tablet_fs_xxl,
+                variables.$fw_bold, 
+                variables.$tablet_lh_xxl
+            );
+        }
+        
+        .section-1__text {
+            @include mixins.text-settings(
+                variables.$white, 
+                variables.$tablet_fs_ml,
+                variables.$fw_light, 
+                variables.$tablet_lh_ml
+            );
+        }
     }
 }

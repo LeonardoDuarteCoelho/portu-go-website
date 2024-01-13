@@ -19,33 +19,55 @@
     height: 100vh;
     width: 250px;
     background-color: white;
-    z-index: 2;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     padding-top: 60px; // Header's height
 
-    .nav-menu__link {
-        @include mixins.padding(
-            variables.$space_2,
-            variables.$space_1,
-            variables.$space_2,
-            variables.$space_1,
-        );
-        @include mixins.text-settings(
-                variables.$gray_9, 
-                variables.$fs_m,
-                variables.$fw_semibold, 
-                variables.$lh_m
-        );
+    .nav-menu__links {
+        margin-top: variables.$space_3;
 
-        display: flex;
-        align-items: center;
-        border-radius: variables.$space_2;
-        margin-top: variables.$space_1;
-        cursor: pointer;
+        .nav-menu__links__link {
+            @include mixins.padding(
+                variables.$space_2,
+                variables.$space_1,
+                variables.$space_2,
+                variables.$space_1,
+            );
+            @include mixins.text-settings(
+                    variables.$gray_9, 
+                    variables.$fs_m,
+                    variables.$fw_semibold, 
+                    variables.$lh_m
+            );
+    
+            display: flex;
+            align-items: center;
+            border-radius: variables.$space_2;
+            margin-top: variables.$space_1;
+            cursor: pointer;
+
+            .nav-menu__links__link__icon {
+                @include mixins.margin-horizontal(variables.$space_2, variables.$space_2);
+            }
+        }
     }
 
-    .nav-menu__link__icon {
-        @include mixins.margin-horizontal(variables.$space_2, variables.$space_2);
+    .nav-menu__user-container {
+        display: flex;
+        align-items: center;
+
+        .nav-menu__user-container__user-icon {
+            @include mixins.margin-horizontal(variables.$space_2, variables.$space_2);
+        }
+        .nav-menu__user-container__user-text {
+            
+            @include mixins.text-settings(
+                variables.$indigo_7, 
+                variables.$fs_m,
+                variables.$fw_medium, 
+                variables.$lh_m
+            );
+        }
     }
 }

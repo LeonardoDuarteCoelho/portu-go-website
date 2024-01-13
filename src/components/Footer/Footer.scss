@@ -7,9 +7,14 @@ footer {
     width: 100vw;
 
     .footer__div-1 {
+        @include mixins.padding(
+            variables.$space_4, 
+            variables.$space_3,
+            0rem, 
+            variables.$space_3
+        );
         height: 80%;
         background-color: variables.$gray_2;
-        padding: variables.$space_4 variables.$space_3 0rem variables.$space_3;
 
         .footer__div-1__social-medias {
             display: flex;
@@ -87,6 +92,45 @@ footer {
             height: auto;
             width: 100px;
         }
+    }
+}
+
+// ---------------------------------- TABLET SCREEN ---------------------------------- //
+@media (min-width: 425px) {
+    
+    .footer__div-1 {
+        // For some reason I'm unable to use the 'padding' mixin function.
+        padding: variables.$tablet_space_4 variables.$tablet_space_3 0rem variables.$tablet_space_3 !important;
+
+        .footer__div-1__navigation-map {
+            ul {
+                @include mixins.margin-vertical(variables.$tablet_space_4 !important, variables.$tablet_space_4 !important);
+
+                li:first-child {
+                    @include mixins.text-settings(
+                        variables.$gray_9, 
+                        variables.$tablet_fs_ml !important, 
+                        variables.$fw_bold, 
+                        variables.$tablet_lh_ml !important
+                    );
+                    margin-bottom: variables.$tablet_space_2 !important;
+                }
+
+                li {
+                    @include mixins.text-settings(
+                        variables.$gray_9, 
+                        variables.$tablet_fs_m !important, 
+                        variables.$fw_regular, 
+                        variables.$tablet_lh_m !important
+                    );
+                    margin-bottom: variables.$tablet_space_1 !important;
+                }
+            }
+        }
+    }
+
+    .footer__div-2 {
+        @include mixins.padding-horizontal(variables.$tablet_space_3 !important, variables.$tablet_space_3 !important);
     }
 }
 

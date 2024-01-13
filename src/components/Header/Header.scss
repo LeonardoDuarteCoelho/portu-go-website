@@ -4,7 +4,7 @@
 
 .header {
     position: fixed;
-    z-index: 100; // Making sure the header is above other content
+    z-index: 1; 
     transition-delay: 0.4s;
     transition: all 0.4s ease-in-out;
     height: 60px;
@@ -13,25 +13,39 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    img {
+        height: auto;
+        width: 110px;
+    }
+    .btn {
+        display: none;
+    }
 }
 
 .header-scrolling {
     @extend .header;
     background: variables.$indigo_7;
-    
-    img {
-        height: auto;
-        width: 110px;
-    }
 }
 
 // The class that will slide the header out of view
 .header-top {
     @extend .header;
     background: variables.$transparent;
+}
 
-    img {
-        height: auto;
-        width: 110px;
+// ---------------------------------- TABLET SCREEN ---------------------------------- //
+@media (min-width: 425px) {
+    .header {
+        justify-content: space-between;
+
+        .btn {
+            display: inline-block;
+            margin-right: variables.$space_3;
+        }
+        .header__btns-container {
+            display: flex;
+            align-items: center;
+        }
     }
 }

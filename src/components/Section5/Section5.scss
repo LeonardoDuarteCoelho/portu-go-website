@@ -11,13 +11,13 @@
     );
 
     .section-5__title {
+        @include mixins.padding-horizontal(variables.$space_2, variables.$space_2);
         @include mixins.text-settings(
             variables.$gray_9, 
             variables.$fs_xl,
             variables.$fw_bold, 
             variables.$lh_xl
         );
-        @include mixins.padding-horizontal(variables.$space_2, variables.$space_2);
         text-align: center;
         margin-bottom: variables.$space_4;
     }
@@ -31,14 +31,62 @@
             width: 40%;
         }
 
-        .section-5__div__text {
-            @include mixins.text-settings(
-                variables.$gray_7, 
-                variables.$fs_m,
-                variables.$fw_regular, 
-                variables.$lh_m
-            );
+        .section-5__div__texts {
+            display: flex;
+            flex-direction: column;
             width: 40%;
+            row-gap: variables.$space_2;
+
+            .section-5__div__texts__text {
+                @include mixins.text-settings(
+                    variables.$gray_7, 
+                    variables.$fs_m,
+                    variables.$fw_regular, 
+                    variables.$lh_m
+                );
+                text-align: start;
+
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// ---------------------------------- TABLET SCREEN ---------------------------------- //
+@media (min-width: 425px) {
+
+    .section-5 {
+        @include mixins.padding(
+            variables.$tablet_space_4 !important, 
+            variables.$tablet_space_2 !important,
+            variables.$tablet_space_4 !important, 
+            variables.$tablet_space_2 !important
+        );
+
+        .section-5__title {
+            @include mixins.padding-horizontal(variables.$tablet_space_2 !important, variables.$tablet_space_2 !important);
+            @include mixins.text-settings(
+                variables.$gray_9, 
+                variables.$tablet_fs_xl !important,
+                variables.$fw_bold, 
+                variables.$tablet_lh_xl !important
+            );
+            margin-bottom: variables.$tablet_space_4 !important;
+        }
+
+        .section-5__div__texts {
+            row-gap: variables.$tablet_space_2 !important;
+
+            .section-5__div__texts__text {
+                @include mixins.text-settings(
+                    variables.$gray_7, 
+                    variables.$tablet_fs_m !important,
+                    variables.$fw_regular, 
+                    variables.$tablet_lh_m !important
+                );
+            }
         }
     }
 }

@@ -26,8 +26,8 @@ const Section7 = ({ title }) => {
 
     return(
         <section className='section-7'>
-            <h1 className='section-7__title'>{title}</h1>
             <form className='section-7__form' onSubmit={handleSubmit}>
+                <h1 className='section-7__title'>{title}</h1>
                 <label className='section-7__form__label' htmlFor='section-7__form__contact-type'>
                     Qual é a natureza do seu contacto?
                 </label>

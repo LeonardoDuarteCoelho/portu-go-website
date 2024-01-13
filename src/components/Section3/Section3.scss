@@ -22,7 +22,7 @@
     }
 
     .section-3__benefits-div {
-        margin-top: variables.$space_3;
+        margin-top: variables.$space_4;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "image text text";
@@ -34,20 +34,20 @@
             grid-area: image;
         }
 
-        .section-3__benefits-div__text-div {
+        .section-3__benefits-div__texts {
             grid-area: text;  
                   
-            h2 {
-                padding-bottom: 0.625rem;
+            .section-3__benefits-div__texts__title  {
                 @include mixins.text-settings(
                     variables.$indigo_7, 
                     variables.$fs_l,
                     variables.$fw_bold, 
                     variables.$lh_l
                 );
+                padding-bottom: variables.$space_1;
             }
 
-            p {
+            .section-3__benefits-div__texts__text {
                 @include mixins.text-settings(
                     variables.$gray_7, 
                     variables.$fs_sm,
@@ -60,6 +60,52 @@
         &:nth-child(even) {
             grid-template-areas: "text text image";
             text-align: end;
+        }
+    }
+}
+
+// ---------------------------------- TABLET SCREEN ---------------------------------- //
+@media (min-width: 425px) {
+    .section-3 {
+        @include mixins.padding(
+            variables.$tablet_space_4 !important,
+            variables.$tablet_space_3 !important,
+            variables.$tablet_space_4 !important,
+            variables.$tablet_space_3 !important
+        );
+
+        .section-3__title {
+            @include mixins.text-settings(
+                variables.$gray_9, 
+                variables.$tablet_fs_xl,
+                variables.$fw_bold, 
+                variables.$tablet_lh_xl
+            );
+            margin-bottom: variables.$tablet_space_4 !important;
+        }
+
+        .section-3__benefits-div {
+            margin-top: variables.$tablet_space_4 !important;
+            grid-column-gap: variables.$tablet_space_2 !important;
+
+            .section-3__benefits-div__texts__title {
+                @include mixins.text-settings(
+                    variables.$indigo_7, 
+                    variables.$tablet_fs_l !important,
+                    variables.$fw_bold, 
+                    variables.$tablet_lh_l !important
+                );
+                padding-bottom: variables.$tablet_space_1 !important;
+            }
+
+            .section-3__benefits-div__texts__text {
+                @include mixins.text-settings(
+                    variables.$gray_7, 
+                    variables.$tablet_fs_sm !important,
+                    variables.$fw_regular, 
+                    variables.$tablet_lh_sm !important
+                );
+            }
         }
     }
 }

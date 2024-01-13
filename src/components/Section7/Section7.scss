@@ -2,113 +2,195 @@
 @use '../../abstract/variables';
 @use '../../abstract/mixins';
 
-.section-7 {
+.section-7__title {
+    @include mixins.text-settings(
+        variables.$gray_0, 
+        variables.$fs_xl,
+        variables.$fw_bold, 
+        variables.$lh_xl
+    );
+    text-align: center;
+}
+
+.section-7__form {
     @include mixins.padding(
         variables.$space_4,
         variables.$space_3,
         variables.$space_4,
         variables.$space_3,
     );
+    height: 100vh;
+    background: linear-gradient(180deg, variables.$indigo_7 0%, variables.$indigo_0 100%);
+    display: flex;
+    flex-direction: column;
 
-    .section-7__title {
+    label {
         @include mixins.text-settings(
-            variables.$gray_9, 
-            variables.$fs_xl,
-            variables.$fw_bold, 
-            variables.$lh_xl
+            variables.$white, 
+            variables.$fs_ml,
+            variables.$fw_medium, 
+            variables.$lh_ml
         );
-        text-align: center;
+        display: block;
+        margin-top: variables.$space_3;
+        margin-bottom: variables.$space_2;
     }
 
-    .section-7__form {
+    select {
+        @include mixins.text-settings(
+            variables.$gray_9, 
+            variables.$fs_m,
+            variables.$fw_regular, 
+            variables.$lh_m
+        );
         @include mixins.padding(
             variables.$space_2,
-            variables.$space_3,
             variables.$space_2,
-            variables.$space_3,
+            variables.$space_2,
+            variables.$space_2,
         );
-        margin-top: variables.$space_4;
-        height: 600px;
+        width: fit-content;
+        border-radius: 5px;
+    }
+
+    input {
+        @include mixins.text-settings(
+            variables.$gray_9, 
+            variables.$fs_m,
+            variables.$fw_regular, 
+            variables.$lh_m
+        );
+        @include mixins.padding(
+            variables.$space_2,
+            variables.$space_2,
+            variables.$space_2,
+            variables.$space_2
+        );
+        width: 100%;
+        margin-bottom: variables.$space_2;
+        border: 1px solid variables.$gray_6;
         border-radius: 20px;
-        background: linear-gradient(180deg, variables.$indigo_7 0%, variables.$indigo_0 100%);
-        display: flex;
-        flex-direction: column;
+
+        &::placeholder {
+            @include mixins.text-settings(
+                variables.$gray_6, 
+                variables.$fs_m,
+                variables.$fw_regular, 
+                variables.$lh_m
+            );
+        }
+    }
+
+    textarea {
+        @extend input;
+        height: 100%;
+
+        &::placeholder {
+            @include mixins.text-settings(
+                variables.$gray_6, 
+                variables.$fs_m,
+                variables.$fw_regular, 
+                variables.$lh_m
+            );
+        }
+    }
+
+    Button {
+        @include mixins.margin-vertical(variables.$space_2, variables.$space_2);
+        width: 100%;
+        height: calc(42px + (2 * 10px));  // Text input height plus two times the margin vertical
+        border: none;
+        max-width: none !important;
+
+        p {
+            text-align: center !important;
+            width: 100%;
+        }
+    }
+}
+
+// ---------------------------------- TABLET SCREEN ---------------------------------- //
+@media (min-width: 425px) {
+    .section-7__title {
+        @include mixins.text-settings(
+            variables.$gray_0, 
+            variables.$tablet_fs_xl,
+            variables.$fw_bold, 
+            variables.$tablet_lh_xl
+        );
+    }
+    
+    .section-7__form {
+        @include mixins.padding(
+            variables.$tablet_space_4 !important,
+            variables.$tablet_space_3 !important,
+            variables.$tablet_space_4 !important,
+            variables.$tablet_space_3 !important,
+        );
 
         label {
             @include mixins.text-settings(
                 variables.$white, 
-                variables.$fs_ml,
+                variables.$tablet_fs_ml,
                 variables.$fw_medium, 
-                variables.$lh_ml
+                variables.$tablet_lh_ml
             );
-            display: block;
-            margin-top: variables.$space_3;
-            margin-bottom: variables.$space_2;
+            margin-top: variables.$tablet_space_3;
+            margin-bottom: variables.$tablet_space_2;
         }
-
+    
         select {
             @include mixins.text-settings(
                 variables.$gray_9, 
-                variables.$fs_m,
+                variables.$tablet_fs_m,
                 variables.$fw_regular, 
-                variables.$lh_m
+                variables.$tablet_lh_m
             );
             @include mixins.padding(
-                variables.$space_2,
-                variables.$space_2,
-                variables.$space_2,
-                variables.$space_2,
+                variables.$tablet_space_2 !important,
+                variables.$tablet_space_2 !important,
+                variables.$tablet_space_2 !important,
+                variables.$tablet_space_2 !important
             );
-            width: fit-content;
-            border-radius: 5px;
         }
-
+    
         input {
             @include mixins.text-settings(
                 variables.$gray_9, 
-                variables.$fs_m,
+                variables.$tablet_fs_m,
                 variables.$fw_regular, 
-                variables.$lh_m
+                variables.$tablet_lh_m
             );
-            @include mixins.padding(
-                variables.$space_2,
-                variables.$space_2,
-                variables.$space_2,
-                variables.$space_2
-            );
-            width: 100%;
-            margin-bottom: variables.$space_2;
-            border: 1px solid variables.$gray_6;
-            border-radius: 20px;
-
+            margin-bottom: variables.$tablet_space_2;
+    
             &::placeholder {
                 @include mixins.text-settings(
                     variables.$gray_6, 
-                    variables.$fs_m,
+                    variables.$tablet_fs_m,
                     variables.$fw_regular, 
-                    variables.$lh_m
+                    variables.$tablet_lh_m
                 );
             }
         }
 
-        textarea {
-            @extend input;
-            height: 200px;
-
-            &::placeholder {
-                @include mixins.text-settings(
-                    variables.$gray_6, 
-                    variables.$fs_m,
-                    variables.$fw_regular, 
-                    variables.$lh_m
-                );
-            }
+        textarea::placeholder {
+            @include mixins.text-settings(
+                variables.$gray_6, 
+                variables.$tablet_fs_m,
+                variables.$fw_regular, 
+                variables.$tablet_lh_m
+            );
         }
 
         Button {
-            @include mixins.padding-horizontal(variables.$space_6, variables.$space_6);
-            align-self: center;
-            @include mixins.margin-vertical(variables.$space_2, variables.$space_2);
+            p {
+                @include mixins.text-settings(
+                variables.$gray_0, 
+                variables.$tablet_fs_m !important,
+                variables.$fw_regular, 
+                variables.$tablet_lh_m !important
+                );
+            }
         }
     }
 }
