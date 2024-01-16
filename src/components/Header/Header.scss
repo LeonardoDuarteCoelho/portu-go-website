@@ -3,18 +3,21 @@
 @use '../../abstract/mixins';
 
 .header {
+    @include mixins.padding-horizontal(
+        variables.$space_3, 
+        variables.$space_3
+    );
     position: fixed;
     z-index: 1; 
     transition-delay: 0.4s;
     transition: all 0.4s ease-in-out;
     height: 60px;
     width: 100vw;
-    @include mixins.padding-horizontal(variables.$space_3, variables.$space_3);
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    img {
+    .header__logo {
         height: auto;
         width: 110px;
     }
@@ -35,17 +38,38 @@
 }
 
 // ---------------------------------- TABLET SCREEN ---------------------------------- //
-@media (min-width: 425px) {
+@media (min-width: variables.$tablet_min_width) {
     .header {
-        justify-content: space-between;
+        @include mixins.padding-horizontal(
+            variables.$tablet_space_3 !important, 
+            variables.$tablet_space_3 !important
+        );
+        height: 65px;
 
         .btn {
             display: inline-block;
-            margin-right: variables.$space_3;
+            margin-right: variables.$space_3 !important;
         }
+        
         .header__btns-container {
             display: flex;
             align-items: center;
+        }
+    }
+}
+
+// ---------------------------------- DESKTOP SCREEN ---------------------------------- //
+@media (min-width: variables.$desktop_min_width) {
+    .header {
+        @include mixins.padding-horizontal(
+            variables.$desktop_space_5 !important, 
+            variables.$desktop_space_5 !important
+        );
+        height: 70px;
+
+        .header__logo {
+            height: auto;
+            width: 160px;
         }
     }
 }

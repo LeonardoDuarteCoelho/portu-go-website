@@ -27,35 +27,35 @@ $indigo_8: #3b5bdb;
 $indigo_9: #364fc7;
 
 // Font Weights:
-$fw_black: 900;
+$fw_black:     900;
 $fw_semiblack: 800;
-$fw_bold: 700;
-$fw_semibold: 600;
-$fw_medium: 500;
-$fw_regular: 400;
-$fw_light: 300;
+$fw_bold:      700;
+$fw_semibold:  600;
+$fw_medium:    500;
+$fw_regular:   400;
+$fw_light:     300;
 $fw_semilight: 200;
-$fw_thin: 100;
+$fw_thin:      100;
 
 // ---------------------------------- MOBILE VALUES ---------------------------------- //
 
 // Font Sizes (Mobile):
-$fs_xxl: 2.5rem;  // 40px
-$fs_xl: 2rem;     // 32px
-$fs_l: 1.5rem;    // 24px
-$fs_ml: 1.25rem;  // 20px
-$fs_m: 1rem;      // 16px
-$fs_sm: 0.875rem; // 14px
-$fs_s: 0.75rem;   // 12px
+$fs_xxl: 2.5rem;  
+$fs_xl:  2rem;     
+$fs_l:   1.5rem;    
+$fs_ml:  1.25rem;
+$fs_m:   1rem;     
+$fs_sm:  0.875rem; 
+$fs_s:   0.75rem;   
 
 // Line Heights (Mobile):
-$lh_xxl: 2.75rem; // 44px
-$lh_xl: 2.25rem;  // 36px
-$lh_l: 1.75rem;   // 28px
-$lh_ml: 1.5rem;   // 24px
-$lh_m: 1.25rem;   // 20px
-$lh_sm: 1.125rem; // 18px
-$lh_s: 1rem;      // 16px
+$lh_xxl: 2.75rem; 
+$lh_xl:  2.25rem;  
+$lh_l:   1.75rem;   
+$lh_ml:  1.5rem;   
+$lh_m:   1.25rem;   
+$lh_sm:  1.125rem; 
+$lh_s:   1rem;      
 
 // Paddings & Margins (Mobile):
 $space_1: 0.3125rem;
@@ -68,26 +68,26 @@ $space_7: 3.75rem;
 $space_8: 4.375rem;
 
 // ---------------------------------- TABLET VALUES ---------------------------------- //
-// Increase of 20% compared with the mobile values
+$tablet_min_width: 425px; 
 
 // Font Sizes (Tablet):
 $tablet_fs_xxl: 3.0rem;
-$tablet_fs_xl: 2.4rem;
-$tablet_fs_l: 1.8rem;
-$tablet_fs_ml: 1.5rem;
-$tablet_fs_m: 1.2rem;
-$tablet_fs_sm: 1.05rem;
-$tablet_fs_s: 0.9rem;
+$tablet_fs_xl:  2.4rem;
+$tablet_fs_l:   1.8rem;
+$tablet_fs_ml:  1.5rem;
+$tablet_fs_m:   1.2rem;
+$tablet_fs_sm:  1.05rem;
+$tablet_fs_s:   0.9rem;
 
 
 // Line Heights (Tablet):
 $tablet_lh_xxl: 3.3rem;
-$tablet_lh_xl: 2.7rem;
-$tablet_lh_l: 2.1rem;
-$tablet_lh_ml: 1.8rem;
-$tablet_lh_m: 1.5rem;
-$tablet_lh_sm: 1.35rem;
-$tablet_lh_s: 1.2rem;
+$tablet_lh_xl:  2.7rem;
+$tablet_lh_l:   2.1rem;
+$tablet_lh_ml:  1.8rem;
+$tablet_lh_m:   1.5rem;
+$tablet_lh_sm:  1.35rem;
+$tablet_lh_s:   1.2rem;
 
 // Paddings & Margins (Tablet):
 $tablet_space_1: 0.375rem;
@@ -100,32 +100,38 @@ $tablet_space_7: 4.5rem;
 $tablet_space_8: 5.25rem;
 
 // ---------------------------------- DESKTOP VALUES ---------------------------------- //
+$desktop_min_width: 768px; 
 
 // Font Sizes (Desktop):
-$desktop_fs_xxl: 2.5rem; 
-$desktop_fs_xl: 2rem;     
-$desktop_fs_l: 1.5rem;   
-$desktop_fs_ml: 1.25rem;  
-$desktop_fs_m: 1rem;      
-$desktop_fs_sm: 0.875rem; 
-$desktop_fs_s: 0.75rem;  
+$desktop_fs_xxl: 4.5rem;
+$desktop_fs_xl: 3.6rem;
+$desktop_fs_l: 2.7rem;
+$desktop_fs_ml: 2.25rem;
+$desktop_fs_m: 1.8rem;
+$desktop_fs_sm: 1.575rem;
+$desktop_fs_s: 1.35rem;
+$desktop_fs_xs: 1.125rem;
+$desktop_fs_xxs: 0.9rem;
 
 // Line Heights (Desktop):
-$desktop_lh_xxl: 2.75rem; 
-$desktop_lh_xl: 2.25rem;  
-$desktop_lh_l: 1.75rem;   
-$desktop_lh_ml: 1.5rem;   
-$desktop_lh_m: 1.25rem;   
-$desktop_lh_sm: 1.125rem; 
-$desktop_lh_s: 1rem;     
+$desktop_lh_xxl: 4.95rem;
+$desktop_lh_xl: 4.05rem;
+$desktop_lh_l: 3.15rem;
+$desktop_lh_ml: 2.7rem;
+$desktop_lh_m: 2.25rem;
+$desktop_lh_sm: 2.025rem;
+$desktop_lh_s: 1.8rem;
+$desktop_lh_xs: 1.575rem;
+$desktop_lh_xss: 1.35rem;
 
 // Paddings & Margins (Desktop):
-$desktop_space_1: 0.3125rem;
-$desktop_space_2: 0.625rem;
-$desktop_space_3: 1.25rem;
-$desktop_space_4: 1.875rem;
-$desktop_space_5: 2.5rem;
-$desktop_space_6: 3.125rem;
-$desktop_space_7: 3.75rem;
-$desktop_space_8: 4.375rem;
+$desktop_space_1: 0.5625rem;
+$desktop_space_2: 1.125rem;
+$desktop_space_3: 2.25rem;
+$desktop_space_4: 3.375rem;
+$desktop_space_5: 4.5rem;
+$desktop_space_6: 5.625rem;
+$desktop_space_7: 6.75rem;
+$desktop_space_8: 7.875rem;
+$desktop_space_9: 9rem;
 

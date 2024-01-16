@@ -40,7 +40,6 @@
                     variables.$fw_semibold, 
                     variables.$lh_m
             );
-    
             display: flex;
             align-items: center;
             border-radius: variables.$space_2;
@@ -60,8 +59,8 @@
         .nav-menu__user-container__user-icon {
             @include mixins.margin-horizontal(variables.$space_2, variables.$space_2);
         }
-        .nav-menu__user-container__user-text {
-            
+
+        .nav-menu__user-container__user-text {            
             @include mixins.text-settings(
                 variables.$indigo_7, 
                 variables.$fs_m,

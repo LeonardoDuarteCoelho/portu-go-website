@@ -3,22 +3,21 @@
 @use '../../abstract/mixins';
 
 footer {
-    height: 100vh;
+    height: fit-content;
     width: 100vw;
 
     .footer__div-1 {
         @include mixins.padding(
             variables.$space_4, 
             variables.$space_3,
-            0rem, 
+            variables.$space_4,
             variables.$space_3
         );
-        height: 80%;
         background-color: variables.$gray_2;
 
         .footer__div-1__social-medias {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-around;
         }
 
         .footer__div-1__navigation-map {
@@ -50,18 +49,30 @@ footer {
         }
 
         .footer__div-1__btn-container {
-            @include mixins.download-app-btn-container-config;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            a img {
+                height: auto;
+                width: calc(50vw - variables.$space_3);
+                max-width: 200px;
+            }        
         }
     }
 
     .footer__div-2 {
+        @include mixins.padding(
+            variables.$space_4,
+            variables.$space_3,
+            0rem, 
+            variables.$space_3
+        ); 
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 20%;
-        background-color: variables.$gray_4;
-        padding: variables.$space_3 variables.$space_3 0rem variables.$space_3;
+        background-color: variables.$gray_4;       
+        row-gap: variables.$space_4;
 
         .footer__div-2__logos-container {
             display: flex;
@@ -96,11 +107,19 @@ footer {
 }
 
 // ---------------------------------- TABLET SCREEN ---------------------------------- //
-@media (min-width: 425px) {
+@media (min-width: variables.$tablet_min_width) {
     
     .footer__div-1 {
-        // For some reason I'm unable to use the 'padding' mixin function.
-        padding: variables.$tablet_space_4 variables.$tablet_space_3 0rem variables.$tablet_space_3 !important;
+        @include mixins.padding(
+            variables.$tablet_space_4, 
+            variables.$tablet_space_3,
+            variables.$tablet_space_4, 
+            variables.$tablet_space_3 !important
+        );
+
+        .footer__div-1__social-medias img {
+            width: 50px
+        }
 
         .footer__div-1__navigation-map {
             ul {
@@ -130,7 +149,13 @@ footer {
     }
 
     .footer__div-2 {
-        @include mixins.padding-horizontal(variables.$tablet_space_3 !important, variables.$tablet_space_3 !important);
+        @include mixins.padding(
+            variables.$tablet_space_4,
+            variables.$tablet_space_3,
+            0rem, 
+            variables.$tablet_space_3 !important
+        );
+        row-gap: variables.$tablet_space_4 !important;    
     }
 }
 

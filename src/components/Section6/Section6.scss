@@ -5,6 +5,7 @@
 .section-6 {
     padding-top: variables.$space_4;
     background-color: variables.$indigo_7;
+    width: 100%;
 
     .section-6__title {
         @include mixins.text-settings(
@@ -54,7 +55,7 @@
 }
 
 // ---------------------------------- TABLET SCREEN ---------------------------------- //
-@media (min-width: 425px) {
+@media (min-width: variables.$tablet_min_width) {
     .section-6 {
         padding-top: variables.$tablet_space_4 !important;
         

@@ -13,7 +13,7 @@ import Section7 from './components/Section7/Section7.js';
 const App = () => {
   return (
     <div className='app'>
-      <meta name="viewport" content="initial-scale=1, width=device-width" />
+      <meta name='viewport' content='initial-scale=1, width=device-width' />
       <Header />
       <Section1 
         title={'Rápido, fácil e justo'}
@@ -23,12 +23,14 @@ const App = () => {
         imgSrc={'images/pexels-element-digital-1051071.jpg'}
         imgName={'Mulher a conduzir'}
       />
-      <Section3 
-        title={'Conduza e seja seu próprio patrão!'}
-      />
-      <Section4
-        title={'Nossos resultados:'}
-      />
+      <gradient className='app__gradient-1'>
+        <Section3 
+          title={'Conduza e seja seu próprio patrão!'}
+        />
+        <Section4
+          title={'Nossos resultados:'}
+        />
+      </gradient>
       <Section5 
         title={'Operamos em todo Portugal'}
       />

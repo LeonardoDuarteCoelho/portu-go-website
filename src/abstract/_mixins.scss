@@ -7,17 +7,6 @@
     line-height: $lh;
 }
 
-@mixin download-app-btn-container-config {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    a img {
-        height: auto;
-        width: calc(50vw - variables.$space_3);
-        max-width: 200px;
-    }
-}
-
 @mixin padding($pad_top, $pad_right, $pad_bottom, $pad_left) {
     padding: $pad_top $pad_right $pad_bottom $pad_left;
 }

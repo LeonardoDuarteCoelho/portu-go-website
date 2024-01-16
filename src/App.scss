@@ -17,3 +17,35 @@
     transform: rotate(360deg);
   }
 } */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  overflow-x: hidden !important;
+}
+
+
+
+// ---------------------------------- DESKTOP SCREEN ---------------------------------- //
+@media (min-width: variables.$desktop_min_width) {
+  .app__gradient-1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background: linear-gradient(
+      // Values provided by the Figma layout
+      161deg, 
+      #4263EB 12.98%, 
+      rgba(116, 143, 252, 0.50) 30.38%, 
+      rgba(255, 255, 255, 0.25) 47.79%,
+      rgba(255, 255, 255, 0.25) 65.19%,
+      rgba(116, 143, 252, 0.50) 82.6%, 
+      #4263EB 100%
+    );
+  }
+}

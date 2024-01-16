@@ -55,7 +55,7 @@
 }
 
 // ---------------------------------- TABLET SCREEN ---------------------------------- //
-@media (min-width: 425px) {
+@media (min-width: variables.$tablet_min_width) {
 
     .section-5 {
         @include mixins.padding(

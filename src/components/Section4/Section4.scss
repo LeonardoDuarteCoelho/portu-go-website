@@ -12,7 +12,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     background: linear-gradient(
+        // Values provided by the Figma layout
         161deg, 
         #FFF 12.98%, 
         rgba(255, 255, 255, 0.25) 41.98%,
@@ -41,7 +43,11 @@
             text-align: center;
             width: calc(100% / 3);
 
-            .section-4__achivements__achivement__title {
+            &:nth-child(2) {
+                align-self: flex-start !important;
+            }
+
+            .section-4__achivements__achivement__texts__title {
                 @include mixins.text-settings(
                     variables.$indigo_7,
                     variables.$fs_l,
@@ -50,7 +56,7 @@
                 );
             }
 
-            .section-4__achivements__achivement__text {
+            .section-4__achivements__achivement__texts__text {
                 @include mixins.text-settings(
                     variables.$gray_9, 
                     variables.$fs_m,
@@ -58,10 +64,6 @@
                     variables.$lh_m
                 );
             }
-        }
-
-        & .section-4__achivements__achivement:nth-child(2) {
-            align-self: flex-start !important;
         }
     }
 
@@ -72,12 +74,14 @@
     }
 }
 
+
+
 // ---------------------------------- TABLET SCREEN ---------------------------------- //
-@media (min-width: 425px) {
+@media (min-width: variables.$tablet_min_width) {
     .section-4 {
         @include mixins.padding(
-            variables.$tablet_space_4 !important, 
-            variables.$tablet_space_2 !important,
+            variables.$tablet_space_4, 
+            variables.$tablet_space_2,
             0, 
             variables.$tablet_space_2 !important
         );
@@ -92,7 +96,7 @@
             margin-bottom: variables.$tablet_space_4 !important;
         }
 
-        .section-4__achivements__achivement__title {
+        .section-4__achivements__achivement__texts__title {
             @include mixins.text-settings(
                 variables.$indigo_7,
                 variables.$tablet_fs_l !important,
@@ -101,7 +105,7 @@
             );
         }
 
-        .section-4__achivements__achivement__text {
+        .section-4__achivements__achivement__texts__text {
             @include mixins.text-settings(
                 variables.$gray_9, 
                 variables.$tablet_fs_m !important,
@@ -113,5 +117,87 @@
 
     .section-4__img {
         margin-top: variables.$tablet_space_3 !important;
+    }
+}
+
+
+
+// ---------------------------------- DESKTOP SCREEN ---------------------------------- //
+@media (min-width: variables.$desktop_min_width) {
+    .section-4__title {
+        @include mixins.text-settings(
+            variables.$gray_9, 
+            variables.$desktop_fs_xl,
+            variables.$fw_bold, 
+            variables.$desktop_lh_xl !important
+        );
+        margin-bottom: variables.$desktop_space_6 !important;
+    }
+    
+    .section-4 {
+        @include mixins.padding(
+            0, 
+            variables.$desktop_space_3,
+            0, 
+            variables.$desktop_space_3 !important
+        );
+        background: none;
+        max-width: 1500px;
+        flex-direction: row-reverse;
+        justify-content: center;
+        column-gap: variables.$desktop_space_9;
+        flex-wrap: wrap;
+
+        .section-4__achivements {
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: variables.$desktop_space_4;
+            height: auto;
+            width: 50%;
+
+            .section-4__achivements__achivement {
+                display: flex;
+                flex-direction: row;
+                text-align: start;
+                column-gap: variables.$desktop_space_3;
+                width: 100%;
+                min-width: 450px;
+    
+                &:nth-child(2) {
+                    align-self: auto !important;
+                }
+            }
+
+            .section-4__achivements__achivement__icon {
+                height: 100px;
+                width: 100px;
+            }
+
+            .section-4__achivements__achivement__texts__title {
+                @include mixins.text-settings(
+                    variables.$indigo_7,
+                    variables.$desktop_fs_l !important,
+                    variables.$fw_bold,
+                    variables.$desktop_lh_l !important
+                );
+            }
+    
+            .section-4__achivements__achivement__texts__text {
+                @include mixins.text-settings(
+                    variables.$gray_9, 
+                    variables.$desktop_fs_ml !important,
+                    variables.$fw_regular, 
+                    variables.$desktop_lh_ml !important
+                );
+            }
+        }
+    }
+
+    .section-4__img {
+        margin-top: 0 !important;
+        height: 600px !important;
+        width: auto !important;
+        padding-top: variables.$desktop_space_6;
+        flex-shrink: 1;
     }
 }

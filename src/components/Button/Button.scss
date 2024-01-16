@@ -5,12 +5,12 @@
 .btn {
     @include mixins.padding(
         variables.$space_2,
+        variables.$space_3,
         variables.$space_2,
-        variables.$space_2,
-        variables.$space_2
+        variables.$space_3
     );
-    border: 3px solid;
-    max-width: 175px;
+    border: 2px solid;
+    max-width: 180px;
     border-radius: 1000rem;
     display: flex;
     flex-direction: row;
@@ -33,7 +33,7 @@
         @include mixins.text-settings(
             variables.$gray_9,
             variables.$fs_m,
-            variables.$fw_bold,
+            variables.$fw_medium,
             variables.$lh_s
         );
     }
@@ -75,5 +75,135 @@
             variables.$fw_medium,
             variables.$lh_s
         );
+    }
+}
+
+
+
+// ---------------------------------- TABLET SCREEN ---------------------------------- //
+@media (min-width: variables.$tablet_min_width) {
+    .btn {
+        @include mixins.padding(
+            variables.$tablet_space_2,
+            variables.$tablet_space_3,
+            variables.$tablet_space_2,
+            variables.$tablet_space_3 !important
+        );
+        max-width: 210px !important;
+        border-width: 3px !important;
+    
+        .btn__icon {
+            margin-right: variables.$tablet_space_2;
+            height: 37px;
+        }
+    }
+    
+    .btn--style-1 {
+        .btn__text {
+            @include mixins.text-settings(
+                variables.$gray_9,
+                variables.$tablet_fs_m,
+                variables.$fw_medium,
+                variables.$tablet_lh_s !important
+            );
+        }
+    }
+    
+    .btn--style-2 {
+        .btn__text {
+            @include mixins.text-settings(
+                variables.$gray_9,
+                variables.$tablet_fs_m,
+                variables.$fw_medium,
+                variables.$tablet_lh_s !important
+            );
+        }
+    }
+    
+    .btn--style-3 {
+        .btn__text {
+            @include mixins.text-settings(
+                variables.$gray_9,
+                variables.$tablet_fs_m,
+                variables.$fw_medium,
+                variables.$tablet_lh_s !important
+            );
+        }
+    }
+    
+    .btn--style-4 {
+        .btn__text {
+            @include mixins.text-settings(
+                variables.$white,
+                variables.$tablet_fs_m,
+                variables.$fw_medium,
+                variables.$tablet_lh_s !important
+            );
+        }
+    }
+}
+
+
+
+// ---------------------------------- DESKTOP SCREEN ---------------------------------- //
+@media (min-width: variables.$desktop_min_width) {
+    .btn {
+        @include mixins.padding(
+            variables.$desktop_space_1,
+            variables.$desktop_space_2,
+            variables.$desktop_space_1,
+            variables.$desktop_space_2 !important
+        );
+        max-width: 240px !important;
+        border-width: 4px !important;
+    
+        .btn__icon {
+            margin-right: variables.$desktop_space_2;
+            height: 42px;
+        }
+    }
+    
+    .btn--style-1 {
+        .btn__text {
+            @include mixins.text-settings(
+                variables.$gray_9,
+                variables.$desktop_fs_s,
+                variables.$fw_medium,
+                variables.$desktop_lh_s !important
+            );
+        }
+    }
+    
+    .btn--style-2 {
+        .btn__text {
+            @include mixins.text-settings(
+                variables.$gray_9,
+                variables.$desktop_fs_s,
+                variables.$fw_medium,
+                variables.$desktop_lh_s !important
+            );
+        }
+    }
+    
+    .btn--style-3 {
+        .btn__text {
+            @include mixins.text-settings(
+                variables.$gray_9,
+                variables.$desktop_fs_s,
+                variables.$fw_medium,
+                variables.$desktop_lh_s !important
+            );
+        }
+    }
+    
+    .btn--style-4 {
+        .btn__text {
+            @include mixins.text-settings(
+                variables.$white,
+                variables.$desktop_fs_s,
+                variables.$fw_medium,
+                variables.$desktop_lh_s !important
+            );
+        }
     }
 }

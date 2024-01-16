@@ -21,7 +21,7 @@
     border-radius: 1000px;
     background-color: variables.$gray_1;
     position: absolute;
-    top: variables.$space_2;
+    top: 0.6rem;
     right: 0.825rem;
 }
 
@@ -58,12 +58,26 @@
     // Second bar
     div:nth-child(2) {
         transform: translateX(-20px);
-        height: 2px;
-        width: 20px;
         background: variables.$transparent;
     }
     // Third bar
     div:nth-child(3) {
         transform: rotate(-45deg) translateY(-3.5px) translateX(6px);
+    }
+}
+
+// ---------------------------------- DESKTOP SCREEN ---------------------------------- //
+@media (min-width: variables.$tablet_min_width) {
+    .bg-circle {
+        top: 0.75rem;
+        right: 1.05rem;
+    }
+}
+
+// ---------------------------------- DESKTOP SCREEN ---------------------------------- //
+@media (min-width: variables.$desktop_min_width) {
+    .bg-circle {
+        top: 0.9rem;
+        right: 4rem;
     }
 }

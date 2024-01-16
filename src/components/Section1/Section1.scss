@@ -10,7 +10,7 @@
         variables.$space_3
     );
     width: 100vw;
-    height: 100vh;
+    height: 800px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.40) 30.73%, rgba(0, 0, 0, 0.80) 66.67%, variables.$black 100%), url('../../../public/images/pexels-andrea-piacquadio-787472.jpg');
     background-position: 60%; // Center the image
     background-size: cover; // Cover the entire element
@@ -43,16 +43,25 @@
     }
     
     .section-1__btn-container {
-        @include mixins.download-app-btn-container-config;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        a img {
+            height: auto;
+            width: calc(50vw - variables.$space_3);
+            max-width: 200px;
+        }
     }
 }
 
+
+
 // ---------------------------------- TABLET SCREEN ---------------------------------- //
-@media (min-width: 425px) {
+@media (min-width: variables.$tablet_min_width) {
     .section-1 {
         @include mixins.padding(
-            variables.$tablet_space_7 !important,
-            variables.$tablet_space_3 !important,
+            variables.$tablet_space_7,
+            variables.$tablet_space_3,
             0,
             variables.$tablet_space_3 !important
         );
@@ -73,6 +82,49 @@
                 variables.$fw_light, 
                 variables.$tablet_lh_ml
             );
+        }
+    }
+}
+
+
+
+// ---------------------------------- DESKTOP SCREEN ---------------------------------- //
+@media (min-width: variables.$desktop_min_width) {
+    .section-1 {
+        @include mixins.padding(
+            variables.$desktop_space_7,
+            variables.$desktop_space_5,
+            0,
+            variables.$desktop_space_5 !important
+        );
+
+        .section-1__title {
+            @include mixins.text-settings(
+                variables.$white, 
+                variables.$desktop_fs_xxl,
+                variables.$fw_bold, 
+                variables.$desktop_lh_xxl
+            );
+        }
+        
+        .section-1__text {
+            @include mixins.text-settings(
+                variables.$white, 
+                variables.$desktop_fs_m,
+                variables.$fw_light, 
+                variables.$desktop_lh_m
+            );
+            max-width: 1100px;
+        }
+
+        .section-1__btn-container {
+            display: flex;
+            justify-content: flex-start;
+            column-gap: variables.$desktop_space_3;
+            width: 50%;
+            a img {
+                max-width: 250px;
+            }
         }
     }
 }

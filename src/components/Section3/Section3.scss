@@ -21,7 +21,7 @@
         text-align: center;
     }
 
-    .section-3__benefits-div {
+    .section-3__benefits__benefit {
         margin-top: variables.$space_4;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -30,14 +30,15 @@
         justify-items: center;
         align-items: center;
 
-        .section-3__benefits-div__img {
+        .section-3__benefits__benefit__img {
             grid-area: image;
+            width: 70px;
         }
 
-        .section-3__benefits-div__texts {
+        .section-3__benefits__benefit__texts {
             grid-area: text;  
                   
-            .section-3__benefits-div__texts__title  {
+            .section-3__benefits__benefit__texts__title  {
                 @include mixins.text-settings(
                     variables.$indigo_7, 
                     variables.$fs_l,
@@ -47,7 +48,7 @@
                 padding-bottom: variables.$space_1;
             }
 
-            .section-3__benefits-div__texts__text {
+            .section-3__benefits__benefit__texts__text {
                 @include mixins.text-settings(
                     variables.$gray_7, 
                     variables.$fs_sm,
@@ -64,13 +65,15 @@
     }
 }
 
+
+
 // ---------------------------------- TABLET SCREEN ---------------------------------- //
-@media (min-width: 425px) {
+@media (min-width: variables.$tablet_min_width) {
     .section-3 {
         @include mixins.padding(
-            variables.$tablet_space_4 !important,
-            variables.$tablet_space_3 !important,
-            variables.$tablet_space_4 !important,
+            variables.$tablet_space_4,
+            variables.$tablet_space_3,
+            variables.$tablet_space_4,
             variables.$tablet_space_3 !important
         );
 
@@ -79,16 +82,20 @@
                 variables.$gray_9, 
                 variables.$tablet_fs_xl,
                 variables.$fw_bold, 
-                variables.$tablet_lh_xl
+                variables.$tablet_lh_xl !important
             );
             margin-bottom: variables.$tablet_space_4 !important;
         }
 
-        .section-3__benefits-div {
+        .section-3__benefits__benefit {
             margin-top: variables.$tablet_space_4 !important;
             grid-column-gap: variables.$tablet_space_2 !important;
 
-            .section-3__benefits-div__texts__title {
+            .section-3__benefits__benefit__img {
+                width: 100px;
+            }    
+
+            .section-3__benefits__benefit__texts__title {
                 @include mixins.text-settings(
                     variables.$indigo_7, 
                     variables.$tablet_fs_l !important,
@@ -98,13 +105,106 @@
                 padding-bottom: variables.$tablet_space_1 !important;
             }
 
-            .section-3__benefits-div__texts__text {
+            .section-3__benefits__benefit__texts__text {
                 @include mixins.text-settings(
                     variables.$gray_7, 
                     variables.$tablet_fs_sm !important,
                     variables.$fw_regular, 
                     variables.$tablet_lh_sm !important
                 );
+            }
+        }
+    }
+}
+
+
+
+// ---------------------------------- DESKTOP SCREEN ---------------------------------- //
+@media (min-width: variables.$desktop_min_width) {
+    .section-3 {
+        @include mixins.padding(
+            variables.$desktop_space_4,
+            variables.$desktop_space_3,
+            variables.$desktop_space_4,
+            variables.$desktop_space_3 !important
+        );
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .section-3__title {
+            @include mixins.text-settings(
+                variables.$white, 
+                variables.$desktop_fs_xl,
+                variables.$fw_semibold, 
+                variables.$desktop_lh_xl !important
+            );
+            margin-bottom: variables.$desktop_space_4 !important;
+        }
+
+        .section-3__benefits {
+            @include mixins.padding-horizontal(
+                variables.$desktop_space_3,
+                variables.$desktop_space_3,
+            );
+            width: 100%;
+            max-width: 1500px;
+            display: flex;
+            flex-direction: row;
+            column-gap: 114px;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+
+            .section-3__benefits__benefit {
+                @include mixins.margin-vertical(
+                    0 !important,
+                    variables.$desktop_space_4
+                );
+                @include mixins.padding(
+                    variables.$desktop_space_3,
+                    variables.$desktop_space_3,
+                    variables.$desktop_space_3,
+                    variables.$desktop_space_3
+                );
+                display: flex;
+                flex-direction: column;
+                height: 500px;
+                width: 400px;
+                border: 2px solid variables.$gray_3;
+                border-radius: 40px;
+                background-color: variables.$white; 
+                grid-column-gap: variables.$desktop_space_2 !important;
+
+                .section-3__benefits__benefit__img {
+                    width: 100px;
+                }    
+
+                .section-3__benefits__benefit__texts__title {
+                    @include mixins.margin-vertical(
+                        variables.$desktop_space_2,
+                        variables.$desktop_space_2
+                    );
+                    @include mixins.text-settings(
+                        variables.$indigo_7, 
+                        variables.$desktop_fs_ml !important,
+                        variables.$fw_bold, 
+                        variables.$desktop_lh_ml !important
+                    );
+                    text-align: center;
+                    padding-bottom: variables.$desktop_space_1 !important;
+                }
+
+                .section-3__benefits__benefit__texts__text {
+                    @include mixins.text-settings(
+                        variables.$gray_7, 
+                        variables.$desktop_fs_s !important,
+                        variables.$fw_regular, 
+                        variables.$desktop_lh_s !important
+                    );
+                    text-align: center;
+                }
             }
         }
     }
