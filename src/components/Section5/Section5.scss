@@ -54,14 +54,16 @@
     }
 }
 
+
+
 // ---------------------------------- TABLET SCREEN ---------------------------------- //
 @media (min-width: variables.$tablet_min_width) {
 
     .section-5 {
         @include mixins.padding(
-            variables.$tablet_space_4 !important, 
-            variables.$tablet_space_2 !important,
-            variables.$tablet_space_4 !important, 
+            variables.$tablet_space_4, 
+            variables.$tablet_space_2,
+            variables.$tablet_space_4, 
             variables.$tablet_space_2 !important
         );
 
@@ -77,7 +79,16 @@
         }
 
         .section-5__div__texts {
+            @include mixins.padding(
+                variables.$tablet_space_3,
+                variables.$tablet_space_3,
+                variables.$tablet_space_3,
+                variables.$tablet_space_3,
+            );
+            background-color: variables.$gray_1;
+            border-radius: 20px;
             row-gap: variables.$tablet_space_2 !important;
+            min-width: 200px;
 
             .section-5__div__texts__text {
                 @include mixins.text-settings(
@@ -89,4 +100,58 @@
             }
         }
     }
+}
+
+
+
+// ---------------------------------- DESKTOP SCREEN ---------------------------------- //
+@media (min-width: variables.$desktop_min_width) {
+    .section-5 {
+        @include mixins.padding(
+            variables.$desktop_space_4, 
+            variables.$desktop_space_2,
+            variables.$desktop_space_4, 
+            variables.$desktop_space_2 !important
+        );
+        max-width: 1500px;
+
+        .section-5__title {
+            @include mixins.padding-horizontal(variables.$desktop_space_2 !important, variables.$desktop_space_2 !important);
+            @include mixins.text-settings(
+                variables.$gray_9, 
+                variables.$desktop_fs_xl !important,
+                variables.$fw_bold, 
+                variables.$desktop_lh_xl !important
+            );
+            margin-bottom: variables.$desktop_space_4 !important;
+        }
+
+        .section-5__div {
+            .section-5__div__texts {
+                @include mixins.padding(
+                    variables.$desktop_space_3,
+                    variables.$desktop_space_3,
+                    variables.$desktop_space_3,
+                    variables.$desktop_space_3,
+                );
+                background-color: variables.$gray_1;
+                border-radius: 20px;
+                row-gap: variables.$desktop_space_3 !important;
+                min-width: 400px;
+    
+                .section-5__div__texts__text {
+                    @include mixins.text-settings(
+                        variables.$gray_7, 
+                        variables.$desktop_fs_m !important,
+                        variables.$fw_regular, 
+                        variables.$desktop_lh_m !important
+                    );
+    
+                    &:nth-child(2) {
+                        display: block !important;
+                    }
+                }
+            }
+        }
+    } 
 }
