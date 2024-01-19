@@ -142,9 +142,9 @@
                 .section-5__div__texts__text {
                     @include mixins.text-settings(
                         variables.$gray_7, 
-                        variables.$desktop_fs_m !important,
+                        variables.$desktop_fs_sm !important,
                         variables.$fw_regular, 
-                        variables.$desktop_lh_m !important
+                        variables.$desktop_lh_sm !important
                     );
     
                     &:nth-child(2) {

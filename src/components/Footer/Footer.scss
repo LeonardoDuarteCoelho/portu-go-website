@@ -106,9 +106,10 @@ footer {
     }
 }
 
+
+
 // ---------------------------------- TABLET SCREEN ---------------------------------- //
 @media (min-width: variables.$tablet_min_width) {
-    
     .footer__div-1 {
         @include mixins.padding(
             variables.$tablet_space_4, 
@@ -159,3 +160,109 @@ footer {
     }
 }
 
+
+
+// ---------------------------------- DESKTOP SCREEN ---------------------------------- //
+@media (min-width: variables.$desktop_min_width) {
+    .footer__div-1 {
+        @include mixins.padding(
+            variables.$desktop_space_4, 
+            variables.$desktop_space_3,
+            variables.$desktop_space_4, 
+            variables.$desktop_space_3 !important
+        );
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .footer__div-1__social-medias {
+            justify-content: space-between;
+            width: variables.$desktop_min_width;
+            align-self: center;
+
+            img {
+                width: 50px
+            }
+        }
+
+        .footer__div-1__navigation-map {
+            @include mixins.padding-horizontal(
+                variables.$desktop_space_3,
+                variables.$desktop_space_3
+            );
+            margin-top: variables.$desktop_space_4;
+            display: flex;
+            column-gap: variables.$desktop_space_6;
+            width: 100%;
+            max-width: 1500px;
+
+            ul {
+                @include mixins.margin-vertical(
+                    variables.$desktop_space_4 !important, 
+                    variables.$desktop_space_4 !important
+                );
+
+                li:first-child {
+                    @include mixins.text-settings(
+                        variables.$gray_9, 
+                        variables.$desktop_fs_m !important, 
+                        variables.$fw_bold, 
+                        variables.$desktop_lh_m !important
+                    );
+                    margin-bottom: variables.$desktop_space_2 !important;
+                }
+
+                li {
+                    @include mixins.text-settings(
+                        variables.$gray_9, 
+                        variables.$desktop_fs_sm !important, 
+                        variables.$fw_regular, 
+                        variables.$desktop_lh_sm !important
+                    );
+                    margin-bottom: variables.$desktop_space_1 !important;
+                }
+            }
+        }
+
+        .footer__div-1__btn-container {
+            justify-content: flex-start !important;
+            align-self: center;
+            width: 100%;
+            max-width: 1500px;
+            padding-left: variables.$desktop_space_3;
+            column-gap: variables.$desktop_space_3;
+            a img {
+                max-width: 250px !important;
+            }
+        }
+    }
+
+    .footer__div-2 {
+        @include mixins.padding(
+            variables.$desktop_space_4,
+            variables.$desktop_space_3,
+            0rem, 
+            variables.$desktop_space_3 !important
+        );
+        row-gap: variables.$desktop_space_2 !important;  
+
+        .footer__div-2__logos-container {
+            @include mixins.padding-horizontal(
+                variables.$desktop_space_3,
+                variables.$desktop_space_3
+            );
+            width: 100%;
+            max-width: 1500px;
+            justify-content: space-between !important;
+        }
+        
+        .footer__div-2__copyright-text p {
+            @include mixins.text-settings(
+                variables.$gray_9, 
+                variables.$desktop_fs_xs !important, 
+                variables.$fw_regular, 
+                variables.$desktop_lh_xs !important
+            );
+        }
+    }
+}

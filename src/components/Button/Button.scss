@@ -78,6 +78,19 @@
     }
 }
 
+.btn--style-5 {
+    border-color: variables.$white;
+    background-color: variables.$transparent;
+    .btn__text {
+        @include mixins.text-settings(
+            variables.$white,
+            variables.$fs_m,
+            variables.$fw_medium,
+            variables.$lh_s
+        );
+    }
+}
+
 
 
 // ---------------------------------- TABLET SCREEN ---------------------------------- //
@@ -89,8 +102,8 @@
             variables.$tablet_space_2,
             variables.$tablet_space_3 !important
         );
-        max-width: 210px !important;
-        border-width: 3px !important;
+        max-width: 210px;
+        border-width: 3px;
     
         .btn__icon {
             margin-right: variables.$tablet_space_2;
@@ -141,6 +154,17 @@
             );
         }
     }
+
+    .btn--style-5 {
+        .btn__text {
+            @include mixins.text-settings(
+                variables.$white,
+                variables.$tablet_fs_m,
+                variables.$fw_medium,
+                variables.$tablet_lh_s
+            );
+        }
+    }
 }
 
 
@@ -150,12 +174,12 @@
     .btn {
         @include mixins.padding(
             variables.$desktop_space_1,
-            variables.$desktop_space_2,
+            variables.$desktop_space_3,
             variables.$desktop_space_1,
-            variables.$desktop_space_2 !important
+            variables.$desktop_space_3 !important
         );
-        max-width: 240px !important;
-        border-width: 4px !important;
+        max-width: 260px;
+        border-width: 4px;
     
         .btn__icon {
             margin-right: variables.$desktop_space_2;
@@ -169,7 +193,7 @@
                 variables.$gray_9,
                 variables.$desktop_fs_s,
                 variables.$fw_medium,
-                variables.$desktop_lh_s !important
+                variables.$desktop_lh_xs !important
             );
         }
     }
@@ -180,7 +204,7 @@
                 variables.$gray_9,
                 variables.$desktop_fs_s,
                 variables.$fw_medium,
-                variables.$desktop_lh_s !important
+                variables.$desktop_lh_xs !important
             );
         }
     }
@@ -191,7 +215,7 @@
                 variables.$gray_9,
                 variables.$desktop_fs_s,
                 variables.$fw_medium,
-                variables.$desktop_lh_s !important
+                variables.$desktop_lh_xs !important
             );
         }
     }
@@ -202,7 +226,18 @@
                 variables.$white,
                 variables.$desktop_fs_s,
                 variables.$fw_medium,
-                variables.$desktop_lh_s !important
+                variables.$desktop_lh_xs !important
+            );
+        }
+    }
+
+    .btn--style-5 {
+        .btn__text {
+            @include mixins.text-settings(
+                variables.$white,
+                variables.$desktop_fs_s,
+                variables.$fw_medium,
+                variables.$desktop_lh_xs
             );
         }
     }

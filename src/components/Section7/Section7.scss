@@ -4,6 +4,9 @@
 
 .section-7 {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, variables.$indigo_7 0%, variables.$indigo_0 100%);
     
     .section-7__title {
         @include mixins.text-settings(
@@ -22,8 +25,8 @@
             variables.$space_4,
             variables.$space_3,
         );
-        height: 100vh;
-        background: linear-gradient(180deg, variables.$indigo_7 0%, variables.$indigo_0 100%);
+        height: 800px;
+        width: 100%;
         display: flex;
         flex-direction: column;
 
@@ -53,7 +56,7 @@
                 variables.$space_2,
             );
             width: fit-content;
-            border-radius: 5px;
+            border-radius: 20px;
         }
 
         input {
@@ -72,7 +75,7 @@
             width: 100%;
             margin-bottom: variables.$space_2;
             border: 1px solid variables.$gray_6;
-            border-radius: 20px;
+            border-radius: 1000rem;
 
             &::placeholder {
                 @include mixins.text-settings(
@@ -87,6 +90,7 @@
         textarea {
             @extend input;
             height: 100%;
+            border-radius: 20px;
 
             &::placeholder {
                 @include mixins.text-settings(
@@ -101,9 +105,9 @@
         Button {
             @include mixins.margin-vertical(variables.$space_2, variables.$space_2);
             width: 100%;
-            height: calc(42px + (2 * 10px));  // Text input height plus two times the margin vertical
+            height: 42px;
             border: none;
-            max-width: none !important;
+            max-width: none;
 
             p {
                 text-align: center !important;
@@ -113,47 +117,49 @@
     }
 }
 
+
+
 // ---------------------------------- TABLET SCREEN ---------------------------------- //
 @media (min-width: variables.$tablet_min_width) {
     .section-7__title {
         @include mixins.text-settings(
             variables.$gray_0, 
-            variables.$tablet_fs_xl,
+            variables.$tablet_fs_xl !important,
             variables.$fw_bold, 
-            variables.$tablet_lh_xl
+            variables.$tablet_lh_xl !important
         );
     }
     
     .section-7__form {
         @include mixins.padding(
-            variables.$tablet_space_4 !important,
-            variables.$tablet_space_3 !important,
-            variables.$tablet_space_4 !important,
+            variables.$tablet_space_4,
+            variables.$tablet_space_3,
+            variables.$tablet_space_4,
             variables.$tablet_space_3 !important,
         );
 
         label {
             @include mixins.text-settings(
                 variables.$white, 
-                variables.$tablet_fs_ml,
+                variables.$tablet_fs_ml !important,
                 variables.$fw_medium, 
-                variables.$tablet_lh_ml
+                variables.$tablet_lh_ml !important
             );
-            margin-top: variables.$tablet_space_3;
-            margin-bottom: variables.$tablet_space_2;
+            margin-top: variables.$tablet_space_3 !important;
+            margin-bottom: variables.$tablet_space_2 !important;
         }
     
         select {
             @include mixins.text-settings(
                 variables.$gray_9, 
-                variables.$tablet_fs_m,
+                variables.$tablet_fs_m !important,
                 variables.$fw_regular, 
-                variables.$tablet_lh_m
+                variables.$tablet_lh_m !important
             );
             @include mixins.padding(
-                variables.$tablet_space_2 !important,
-                variables.$tablet_space_2 !important,
-                variables.$tablet_space_2 !important,
+                variables.$tablet_space_2,
+                variables.$tablet_space_2,
+                variables.$tablet_space_2,
                 variables.$tablet_space_2 !important
             );
         }
@@ -161,38 +167,164 @@
         input {
             @include mixins.text-settings(
                 variables.$gray_9, 
-                variables.$tablet_fs_m,
+                variables.$tablet_fs_m !important,
                 variables.$fw_regular, 
-                variables.$tablet_lh_m
+                variables.$tablet_lh_m !important
             );
-            margin-bottom: variables.$tablet_space_2;
+            padding-left: variables.$tablet_space_3 !important;
+            margin-bottom: variables.$tablet_space_2 !important;
     
             &::placeholder {
                 @include mixins.text-settings(
                     variables.$gray_6, 
-                    variables.$tablet_fs_m,
+                    variables.$tablet_fs_m !important,
                     variables.$fw_regular, 
-                    variables.$tablet_lh_m
+                    variables.$tablet_lh_m !important
                 );
             }
         }
 
-        textarea::placeholder {
+        textarea {
             @include mixins.text-settings(
                 variables.$gray_6, 
-                variables.$tablet_fs_m,
+                variables.$tablet_fs_sm !important,
                 variables.$fw_regular, 
-                variables.$tablet_lh_m
+                variables.$tablet_lh_sm !important
             );
+
+            &::placeholder {
+                @include mixins.text-settings(
+                    variables.$gray_6, 
+                    variables.$tablet_fs_sm !important,
+                    variables.$fw_regular, 
+                    variables.$tablet_lh_sm !important
+                );
+            }
         }
 
         Button {
+            @include mixins.margin-vertical(
+                variables.$tablet_space_2, 
+                variables.$tablet_space_2
+            );
+            width: 100%;
+            height: 42px;
+            border: none;
+            max-width: none;
+
             p {
                 @include mixins.text-settings(
                 variables.$gray_0, 
                 variables.$tablet_fs_m !important,
                 variables.$fw_regular, 
                 variables.$tablet_lh_m !important
+                );
+            }
+        }
+    }
+}
+
+
+
+// ---------------------------------- DESKTOP SCREEN ---------------------------------- //
+@media (min-width: variables.$desktop_min_width) {
+    .section-7__title {
+        @include mixins.text-settings(
+            variables.$gray_0, 
+            variables.$desktop_fs_xl !important,
+            variables.$fw_bold, 
+            variables.$desktop_lh_xl !important
+        );
+    }
+    
+    .section-7__form {
+        @include mixins.padding(
+            variables.$desktop_space_4,
+            variables.$desktop_space_3,
+            variables.$desktop_space_4,
+            variables.$desktop_space_3 !important,
+        );
+        height: 1000px !important;
+        max-width: 1500px;
+
+        label {
+            @include mixins.text-settings(
+                variables.$white, 
+                variables.$desktop_fs_ml !important,
+                variables.$fw_medium, 
+                variables.$desktop_lh_ml !important
+            );
+            margin-top: variables.$desktop_space_3 !important;
+            margin-bottom: variables.$desktop_space_2 !important;
+        }
+    
+        select {
+            @include mixins.text-settings(
+                variables.$gray_9, 
+                variables.$desktop_fs_sm !important,
+                variables.$fw_regular, 
+                variables.$desktop_lh_sm !important
+            );
+            @include mixins.padding(
+                variables.$desktop_space_2,
+                variables.$desktop_space_2,
+                variables.$desktop_space_2,
+                variables.$desktop_space_2 !important
+            );
+        }
+    
+        input {
+            @include mixins.text-settings(
+                variables.$gray_9, 
+                variables.$desktop_fs_sm !important,
+                variables.$fw_regular, 
+                variables.$desktop_lh_sm !important
+            );
+            padding-left: variables.$desktop_space_3 !important;
+            margin-bottom: variables.$desktop_space_2 !important;
+            height: 70px;
+    
+            &::placeholder {
+                @include mixins.text-settings(
+                    variables.$gray_6, 
+                    variables.$desktop_fs_sm !important,
+                    variables.$fw_regular, 
+                    variables.$desktop_lh_sm !important
+                );
+            }
+        }
+
+        textarea {
+            @include mixins.text-settings(
+                variables.$gray_6, 
+                variables.$desktop_fs_sm !important,
+                variables.$fw_regular, 
+                variables.$desktop_lh_sm !important
+            );
+            padding-left: variables.$desktop_space_3;
+            height: 300px !important;
+
+            &::placeholder {
+                @include mixins.text-settings(
+                    variables.$gray_6, 
+                    variables.$desktop_fs_sm !important,
+                    variables.$fw_regular, 
+                    variables.$desktop_lh_sm !important
+                );
+            }
+        }
+
+        Button {
+            height: 70px !important;
+            max-width: 400px !important;
+            align-self: center;
+
+            p {
+                @include mixins.text-settings(
+                variables.$gray_0, 
+                variables.$desktop_fs_sm !important,
+                variables.$fw_regular, 
+                variables.$desktop_lh_sm !important
                 );
             }
         }

@@ -26,7 +26,7 @@
         }
     }
 
-    .section-6__main-div {
+    .section-6__main-div__first-div {
         @include mixins.padding(
             variables.$space_4, 
             variables.$space_3, 
@@ -40,19 +40,21 @@
         column-gap: variables.$space_1;
         row-gap: variables.$space_5;
 
-        .section-6__main-div__buttons-div {
+        .section-6__main-div__first-div__buttons-div {
             display: flex;
             flex-direction: column;
             row-gap: variables.$space_3;
             padding-bottom: variables.$space_3;
         }
-        .section-6__main-div__img {
+        .section-6__main-div__first-div__img {
             width: 70%;
             align-self: flex-end;
         }
     }
 
 }
+
+
 
 // ---------------------------------- TABLET SCREEN ---------------------------------- //
 @media (min-width: variables.$tablet_min_width) {
@@ -77,10 +79,10 @@
             }
         }
     
-        .section-6__main-div {
+        .section-6__main-div__first-div {
             @include mixins.padding(
-                variables.$tablet_space_4 !important, 
-                variables.$tablet_space_3 !important, 
+                variables.$tablet_space_4, 
+                variables.$tablet_space_3, 
                 0, 
                 variables.$tablet_space_3 !important
             );
@@ -89,15 +91,69 @@
             column-gap: variables.$tablet_space_1 !important;
             row-gap: variables.$tablet_space_5 !important;
     
-            .section-6__main-div__buttons-div {
+            .section-6__main-div__first-div__buttons-div {
                 row-gap: variables.$tablet_space_3 !important;
                 padding-bottom: variables.$tablet_space_3 !important;
             }
 
-            .section-6__main-div__img {
+            .section-6__main-div__first-div__img {
                 width: 40% !important;
             }
         }
 
+    }
+}
+
+
+
+// ---------------------------------- DESKTOP SCREEN ---------------------------------- //
+@media (min-width: variables.$desktop_min_width) {
+    .section-6 {
+        padding-top: variables.$desktop_space_4 !important;
+        
+        .section-6__title {
+            @include mixins.text-settings(
+                variables.$white, 
+                variables.$desktop_fs_xl !important,
+                variables.$fw_light, 
+                variables.$desktop_lh_xl !important
+            );
+    
+            span {
+                @include mixins.text-settings(
+                    variables.$white, 
+                    variables.$desktop_fs_xl !important,
+                    variables.$fw_bold, 
+                    variables.$desktop_lh_xl !important
+                );
+            }
+        }
+    
+        .section-6__main-div {
+            display: flex;
+            justify-content: center;
+            height: 500px;
+
+            .section-6__main-div__first-div {
+                @include mixins.padding(
+                    variables.$desktop_space_4, 
+                    variables.$desktop_space_3, 
+                    0, 
+                    variables.$desktop_space_3 !important
+                );
+                justify-content: space-evenly !important;
+                width: 100%;
+                max-width: 1500px;
+        
+                .section-6__main-div__first-div__buttons-div {
+                    row-gap: variables.$desktop_space_3 !important;
+                    padding-bottom: variables.$desktop_space_3 !important;
+                }
+    
+                .section-6__main-div__first-div__img {
+                    width: 400px !important;
+                }
+            }
+        }
     }
 }

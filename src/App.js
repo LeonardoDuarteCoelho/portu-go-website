@@ -23,14 +23,14 @@ const App = () => {
         imgSrc={'images/pexels-element-digital-1051071.jpg'}
         imgName={'Mulher a conduzir'}
       />
-      <gradient className='app__gradient-1'>
+      <div className='app__gradient-1'>
         <Section3 
           title={'Conduza e seja seu próprio patrão!'}
         />
         <Section4
           title={'Nossos resultados:'}
         />
-      </gradient>
+      </div>
       <Section5 
         title={'Operamos em todo Portugal'}
       />

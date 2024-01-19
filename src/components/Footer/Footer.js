@@ -1,15 +1,50 @@
+import React, { useState, useEffect } from 'react';
 import './Footer.scss';
 
 const Footer = () => {
+    const [facebookIcon, setFacebookIcon] = useState('images/ic-facebook-black-btn.svg');
+    const [linkedInIcon, setLinkedInIcon] = useState('images/ic-linked-in-black-btn.svg');
+    const [instagramIcon, setInstagramIcon] = useState('images/ic-instagram-black-btn.svg');
+    const [twitterIcon, setTwitterIcon] = useState('images/ic-x-twitter-black-btn.svg');
+    const [discordIcon, setDiscordIcon] = useState('images/ic-discord-black-btn.svg');
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 768) {
+                setFacebookIcon('images/ic-facebook-alt-btn.svg');
+                setLinkedInIcon('images/ic-linked-in-alt-btn.svg');
+                setInstagramIcon('images/ic-instagram-alt-btn.svg');
+                setTwitterIcon('images/ic-x-twitter-alt-btn.svg');
+                setDiscordIcon('images/ic-discord-alt-btn.svg');
+            } else {
+                // Set the icons for smaller screens if needed
+                setFacebookIcon('images/ic-facebook-black-btn.svg');
+                setLinkedInIcon('images/ic-linked-in-black-btn.svg');
+                setInstagramIcon('images/ic-instagram-black-btn.svg');
+                setTwitterIcon('images/ic-x-twitter-black-btn.svg');
+                setDiscordIcon('images/ic-discord-black-btn.svg');
+            }
+        };
+
+        // Add event listener
+        window.addEventListener('resize', handleResize);
+
+        // Call the resize handler initially to set the correct icons
+        handleResize();
+
+        // Cleanup the event listener
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return(
         <footer>
             <div className='footer__div-1'>
                 <div className='footer__div-1__social-medias'>
-                    <img src='images/ic-facebook-black-btn.svg' alt='Ícone do Facebook' />
-                    <img src='images/ic-linked-in-black-btn.svg' alt='Ícone do LinkedIn' />
-                    <img src='images/ic-instagram-black-btn.svg' alt='Ícone do Instagram' />
-                    <img src='images/ic-x-twitter-black-btn.svg' alt='Ícone do Twitter' />
-                    <img src='images/ic-discord-black-btn.svg' alt='Ícone do Discord' />
+                    <img src={facebookIcon} alt='Ícone do Facebook' />
+                    <img src={linkedInIcon} alt='Ícone do LinkedIn' />
+                    <img src={instagramIcon} alt='Ícone do Instagram' />
+                    <img src={twitterIcon} alt='Ícone do Twitter' />
+                    <img src={discordIcon} alt='Ícone do Discord' />
                 </div>
                 <div className='footer__div-1__navigation-map'>
                     <ul>

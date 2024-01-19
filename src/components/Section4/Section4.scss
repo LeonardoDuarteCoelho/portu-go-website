@@ -2,6 +2,21 @@
 @use '../../abstract/variables';
 @use '../../abstract/mixins';
 
+.section-4__title {
+    @include mixins.text-settings(
+        variables.$gray_9, 
+        variables.$fs_xl,
+        variables.$fw_bold, 
+        variables.$lh_xl
+    );
+    @include mixins.margin-vertical(
+        variables.$space_4 !important,
+        variables.$space_2 !important
+    );
+    text-align: center;
+    margin-bottom: variables.$space_4;
+}
+
 .section-4 {
     @include mixins.padding(
         variables.$space_4, 
@@ -21,17 +36,6 @@
         rgba(116, 143, 252, 0.50) 70.99%,
         #4263EB 100%
     );
-
-    .section-4__title {
-        @include mixins.text-settings(
-            variables.$gray_9, 
-            variables.$fs_xl,
-            variables.$fw_bold, 
-            variables.$lh_xl
-        );
-        text-align: center;
-        margin-bottom: variables.$space_4;
-    }
 
     .section-4__achivements {
         width: 100%;
@@ -78,6 +82,19 @@
 
 // ---------------------------------- TABLET SCREEN ---------------------------------- //
 @media (min-width: variables.$tablet_min_width) {
+    .section-4__title {
+        @include mixins.text-settings(
+            variables.$gray_9, 
+            variables.$tablet_fs_xl,
+            variables.$fw_bold, 
+            variables.$tablet_lh_xl
+        );
+        @include mixins.margin-vertical(
+            variables.$tablet_space_4 !important,
+            variables.$tablet_space_2 !important
+        );
+    }
+
     .section-4 {
         @include mixins.padding(
             variables.$tablet_space_4, 
@@ -85,16 +102,6 @@
             0, 
             variables.$tablet_space_2 !important
         );
-
-        .section-4__title {
-            @include mixins.text-settings(
-                variables.$gray_9, 
-                variables.$tablet_fs_xl,
-                variables.$fw_bold, 
-                variables.$tablet_lh_xl
-            );
-            margin-bottom: variables.$tablet_space_4 !important;
-        }
 
         .section-4__achivements__achivement__texts__title {
             @include mixins.text-settings(
@@ -185,9 +192,9 @@
             .section-4__achivements__achivement__texts__text {
                 @include mixins.text-settings(
                     variables.$gray_9, 
-                    variables.$desktop_fs_ml !important,
+                    variables.$desktop_fs_m !important,
                     variables.$fw_regular, 
-                    variables.$desktop_lh_ml !important
+                    variables.$desktop_lh_m !important
                 );
             }
         }
