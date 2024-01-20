@@ -53,10 +53,10 @@
                 variables.$space_2,
                 variables.$space_2,
                 variables.$space_2,
-                variables.$space_2,
+                variables.$space_2
             );
             width: fit-content;
-            border-radius: 20px;
+            border-radius: 10px;
         }
 
         input {
@@ -70,7 +70,7 @@
                 variables.$space_2,
                 variables.$space_2,
                 variables.$space_2,
-                variables.$space_2
+                variables.$space_3
             );
             width: 100%;
             margin-bottom: variables.$space_2;
@@ -162,6 +162,7 @@
                 variables.$tablet_space_2,
                 variables.$tablet_space_2 !important
             );
+            border-radius: 15px;
         }
     
         input {
@@ -271,6 +272,7 @@
                 variables.$desktop_space_2,
                 variables.$desktop_space_2 !important
             );
+            border-radius: 20px;
         }
     
         input {

@@ -12,7 +12,7 @@
     transition-delay: 0.4s;
     transition: all 0.4s ease-in-out;
     height: 60px;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,6 +37,8 @@
     background: variables.$transparent;
 }
 
+
+
 // ---------------------------------- TABLET SCREEN ---------------------------------- //
 @media (min-width: variables.$tablet_min_width) {
     .header {
@@ -57,6 +59,8 @@
         }
     }
 }
+
+
 
 // ---------------------------------- DESKTOP SCREEN ---------------------------------- //
 @media (min-width: variables.$desktop_min_width) {

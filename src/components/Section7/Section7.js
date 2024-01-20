@@ -7,7 +7,8 @@ const Section7 = ({ title }) => {
         fullName: '',
         email: '',
         subject: '',
-        message: ''
+        message: '',
+        contactType: 'userFeedback' // Added this line
     });
 
     const handleChange = (e) => {
@@ -20,7 +21,7 @@ const Section7 = ({ title }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Sending data to a server. Work in progress
+        // Logic to send data to a server or handle it
         console.log(formData);
     }
 
@@ -28,10 +29,10 @@ const Section7 = ({ title }) => {
         <section className='section-7'>
             <form className='section-7__form' onSubmit={handleSubmit}>
                 <h1 className='section-7__title'>{title}</h1>
-                <label className='section-7__form__label' htmlFor='section-7__form__contact-type'>
+                <label className='section-7__form__label' htmlFor='contactType'>
                     Qual é a natureza do seu contacto?
                 </label>
-                <select id='section-7__form__contact-type' name='contact-type' onChange={handleChange}>
+                <select id='contactType' name='contactType' onChange={handleChange} value={formData.contactType}>
                     <option value='userFeedback'>Avaliação de utilizador</option>
                     <option value='comercial'>Comercial</option>
                     <option value='lawful'>Jurídico</option>
@@ -72,7 +73,7 @@ const Section7 = ({ title }) => {
                 ></textarea>
                 <Button 
                     type="submit"
-                    styleType={'btn--style-4'} 
+                    styleType={'btn--style-1'} 
                     text={'Enviar'} 
                 />
             </form>

@@ -1,6 +1,6 @@
 import './Header.scss';
 import BurguerMenu from '../BurguerMenu/BurguerMenu.js';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import Button from '../Button/Button.js';
 
 const Header = () => {
@@ -13,20 +13,21 @@ const Header = () => {
     const [headerStyle, setHeaderStyle] = useState('header header-top');
     const [hamburguerColor, setHamburguerColor] = useState('menu-button-burguer--black');
     
-    const toggleBodyScroll = (shouldScroll) => {
+    const toggleBodyScroll = useCallback((shouldScroll) => {
         if (shouldScroll) {
+            headerRef.current.style.top = `-${headerRef.current.offsetHeight}px`;
             document.body.style.overflow = 'visible'; // Re-enable scrolling
         } else {
             document.body.style.overflow = 'hidden'; // Disable scrolling
         }
-    };
+    }, []);
 
-    const toggleMenu = (isOpen) => {
+    const toggleMenu = useCallback((isOpen) => {
         setIsMenuOpen(isOpen); // Callback to update the menu state
         toggleBodyScroll(!isOpen); // Disable scrolling when menu is open, enable when closed
-    }
+    }, [toggleBodyScroll]);
 
-    const handleScroll = () => {
+    const handleScroll = useCallback(() => {
         const currentScrollY = window.scrollY;
 
         // Only enables the responsive scrolling when navigation menu is off
@@ -52,7 +53,7 @@ const Header = () => {
             }
         }
         setLastScrollY(currentScrollY);
-    }
+    }, [isMenuOpen, lastScrollY, cumulativeUpScroll]);
   
     useEffect(() => {
             window.addEventListener('scroll', handleScroll, { passive: true });
@@ -60,7 +61,7 @@ const Header = () => {
             return () => {
                 window.removeEventListener('scroll', handleScroll);
             };
-    },  [cumulativeUpScroll, lastScrollY, isMenuOpen])
+    },  [handleScroll])
 
     return (
         <header className={headerStyle} ref={headerRef}>

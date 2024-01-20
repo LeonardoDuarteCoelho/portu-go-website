@@ -15,6 +15,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    cursor: pointer;
 
     .btn__icon {
         margin-right: variables.$space_2;
@@ -28,20 +29,45 @@
 
 .btn--style-1 {
     border-color: variables.$indigo_7;
-    background-color: variables.$transparent;
+    background-color: variables.$indigo_7;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(0.95); 
+        background-color: variables.$indigo_9; 
+        border-color: variables.$indigo_9;
+    }
+
     .btn__text {
         @include mixins.text-settings(
-            variables.$gray_9,
+            variables.$white,
             variables.$fs_m,
             variables.$fw_medium,
             variables.$lh_s
         );
+        transition: color 0.3s ease; 
     }
 }
+
+
 
 .btn--style-2 {
     border-color: variables.$white;
     background-color: variables.$white;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+    
+    &:active {
+        transform: scale(0.95);
+    }
+
     .btn__text {
         @include mixins.text-settings(
             variables.$gray_9,
@@ -49,45 +75,7 @@
             variables.$fw_medium,
             variables.$lh_s
         );
-    }
-}
-
-.btn--style-3 {
-    border-color: variables.$white;
-    background-color: variables.$white;
-    .btn__text {
-        @include mixins.text-settings(
-            variables.$gray_9,
-            variables.$fs_m,
-            variables.$fw_medium,
-            variables.$lh_s
-        );
-    }
-}
-
-.btn--style-4 {
-    border-color: variables.$indigo_7;
-    background-color: variables.$indigo_7;
-    .btn__text {
-        @include mixins.text-settings(
-            variables.$white,
-            variables.$fs_m,
-            variables.$fw_medium,
-            variables.$lh_s
-        );
-    }
-}
-
-.btn--style-5 {
-    border-color: variables.$white;
-    background-color: variables.$transparent;
-    .btn__text {
-        @include mixins.text-settings(
-            variables.$white,
-            variables.$fs_m,
-            variables.$fw_medium,
-            variables.$lh_s
-        );
+        transition: color 0.3s ease;
     }
 }
 
@@ -114,7 +102,7 @@
     .btn--style-1 {
         .btn__text {
             @include mixins.text-settings(
-                variables.$gray_9,
+                variables.$white,
                 variables.$tablet_fs_m,
                 variables.$fw_medium,
                 variables.$tablet_lh_s !important
@@ -129,39 +117,6 @@
                 variables.$tablet_fs_m,
                 variables.$fw_medium,
                 variables.$tablet_lh_s !important
-            );
-        }
-    }
-    
-    .btn--style-3 {
-        .btn__text {
-            @include mixins.text-settings(
-                variables.$gray_9,
-                variables.$tablet_fs_m,
-                variables.$fw_medium,
-                variables.$tablet_lh_s !important
-            );
-        }
-    }
-    
-    .btn--style-4 {
-        .btn__text {
-            @include mixins.text-settings(
-                variables.$white,
-                variables.$tablet_fs_m,
-                variables.$fw_medium,
-                variables.$tablet_lh_s !important
-            );
-        }
-    }
-
-    .btn--style-5 {
-        .btn__text {
-            @include mixins.text-settings(
-                variables.$white,
-                variables.$tablet_fs_m,
-                variables.$fw_medium,
-                variables.$tablet_lh_s
             );
         }
     }
@@ -190,7 +145,7 @@
     .btn--style-1 {
         .btn__text {
             @include mixins.text-settings(
-                variables.$gray_9,
+                variables.$white,
                 variables.$desktop_fs_s,
                 variables.$fw_medium,
                 variables.$desktop_lh_xs !important
@@ -205,39 +160,6 @@
                 variables.$desktop_fs_s,
                 variables.$fw_medium,
                 variables.$desktop_lh_xs !important
-            );
-        }
-    }
-    
-    .btn--style-3 {
-        .btn__text {
-            @include mixins.text-settings(
-                variables.$gray_9,
-                variables.$desktop_fs_s,
-                variables.$fw_medium,
-                variables.$desktop_lh_xs !important
-            );
-        }
-    }
-    
-    .btn--style-4 {
-        .btn__text {
-            @include mixins.text-settings(
-                variables.$white,
-                variables.$desktop_fs_s,
-                variables.$fw_medium,
-                variables.$desktop_lh_xs !important
-            );
-        }
-    }
-
-    .btn--style-5 {
-        .btn__text {
-            @include mixins.text-settings(
-                variables.$white,
-                variables.$desktop_fs_s,
-                variables.$fw_medium,
-                variables.$desktop_lh_xs
             );
         }
     }

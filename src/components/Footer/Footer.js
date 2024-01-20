@@ -9,7 +9,7 @@ const Footer = () => {
     const [discordIcon, setDiscordIcon] = useState('images/ic-discord-black-btn.svg');
 
     useEffect(() => {
-        const handleResize = () => {
+        const handleIcons = () => {
             if (window.innerWidth > 768) {
                 setFacebookIcon('images/ic-facebook-alt-btn.svg');
                 setLinkedInIcon('images/ic-linked-in-alt-btn.svg');
@@ -27,13 +27,13 @@ const Footer = () => {
         };
 
         // Add event listener
-        window.addEventListener('resize', handleResize);
+        window.addEventListener('resize', handleIcons);
 
         // Call the resize handler initially to set the correct icons
-        handleResize();
+        handleIcons();
 
         // Cleanup the event listener
-        return () => window.removeEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleIcons);
     }, []);
 
     return(
