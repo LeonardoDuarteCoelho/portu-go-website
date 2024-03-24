@@ -42,12 +42,20 @@
             );
             display: flex;
             align-items: center;
-            border-radius: variables.$space_2;
             margin-top: variables.$space_1;
             cursor: pointer;
+            
+            &:hover {
+                background-color: variables.$gray_3;
+            }
 
             .nav-menu__links__link__icon {
-                @include mixins.margin-horizontal(variables.$space_2, variables.$space_2);
+                @include mixins.margin-horizontal(
+                    variables.$space_2, 
+                    variables.$space_2
+                );
+                width: 25px;
+                height: 25px;
             }
         }
     }
@@ -57,7 +65,12 @@
         align-items: center;
 
         .nav-menu__user-container__user-icon {
-            @include mixins.margin-horizontal(variables.$space_2, variables.$space_2);
+            @include mixins.margin-horizontal(
+                variables.$space_2, 
+                variables.$space_2
+            );
+            width: 70px;
+            height: 70px;
         }
 
         .nav-menu__user-container__user-text {            
@@ -95,7 +108,6 @@
                         variables.$fw_semibold, 
                         variables.$tablet_lh_m !important
                 );
-                border-radius: variables.$tablet_space_2 !important;
                 margin-top: variables.$tablet_space_1 !important;
     
                 .nav-menu__links__link__icon {
@@ -103,6 +115,8 @@
                         variables.$tablet_space_2 !important, 
                         variables.$tablet_space_2 !important
                     );
+                    width: 30px;
+                    height: 30px;
                 }
             }
         }
@@ -130,7 +144,7 @@
 // ---------------------------------- DESKTOP SCREEN ---------------------------------- //
 @media (min-width: variables.$desktop_min_width) {
     .nav-menu {
-        width: 400px;
+        width: 600px;
         padding-top: 70px; // Header's height
     
         .nav-menu__links {
@@ -149,7 +163,6 @@
                         variables.$fw_semibold, 
                         variables.$desktop_lh_sm !important
                 );
-                border-radius: variables.$desktop_space_2 !important;
                 margin-top: variables.$desktop_space_1 !important;
     
                 .nav-menu__links__link__icon {
@@ -157,6 +170,8 @@
                         variables.$desktop_space_2 !important, 
                         variables.$desktop_space_2 !important
                     );
+                    width: 40px;
+                    height: 40px;
                 }
             }
         }
