@@ -40,29 +40,29 @@ const Footer = () => {
         <footer>
             <div className='footer__div-1'>
                 <div className='footer__div-1__social-medias'>
-                    <img src={facebookIcon} alt='Ícone do Facebook' />
-                    <img src={linkedInIcon} alt='Ícone do LinkedIn' />
-                    <img src={instagramIcon} alt='Ícone do Instagram' />
-                    <img src={twitterIcon} alt='Ícone do Twitter' />
-                    <img src={discordIcon} alt='Ícone do Discord' />
+                    <a href='.'><img src={facebookIcon} alt='Ícone do Facebook' /></a>
+                    <a href='.'><img src={linkedInIcon} alt='Ícone do LinkedIn' /></a>
+                    <a href='.'><img src={instagramIcon} alt='Ícone do Instagram' /></a>
+                    <a href='.'><img src={twitterIcon} alt='Ícone do Twitter' /></a>
+                    <a href='.'><img src={discordIcon} alt='Ícone do Discord' /></a>
                 </div>
                 <div className='footer__div-1__navigation-map'>
                     <ul>
                         <li>PortuGO</li>
-                        <li>Boas-vindas</li>
-                        <li>Quem somos nós</li>
-                        <li>Benefícios para condutores</li>
-                        <li>Nossos resultados</li>
-                        <li>Onde operamos</li>
-                        <li>Instale nossa app</li>
-                        <li>Contacte-nos</li>
+                        <li><a href='.'>Boas-vindas</a></li>
+                        <li><a href='.'>Quem somos nós</a></li>
+                        <li><a href='.'>Benefícios para condutores</a></li>
+                        <li><a href='.'>Nossos resultados</a></li>
+                        <li><a href='.'>Onde operamos</a></li>
+                        <li><a href='.'>Instale nossa app</a></li>
+                        <li><a href='.'>Contacte-nos</a></li>
                     </ul>
                     <ul>
                         <li>Utilizador</li>
-                        <li>Iniciar sessão</li>
-                        <li>Termos & Condições</li>
-                        <li>Privacidade</li>
-                        <li>Cookies</li>
+                        <li><a href='.'>Iniciar sessão</a></li>
+                        <li><a href='.'>Termos & Condições</a></li>
+                        <li><a href='.'>Privacidade</a></li>
+                        <li><a href='.'>Cookies</a></li>
                     </ul>
                 </div>
                 <div className='footer__div-1__btn-container'>

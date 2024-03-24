@@ -44,6 +44,10 @@ footer {
                         variables.$lh_m
                     );
                     margin-bottom: variables.$space_1;
+                    
+                    a {
+                        text-decoration: none;
+                    }
                 }
             }
         }

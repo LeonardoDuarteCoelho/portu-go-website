@@ -1,7 +1,6 @@
 // Import the functions you need from the SDKs you need:
 import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
-import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use (Check link below for more info).
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -21,7 +20,6 @@ const firebaseConfig = {
 // Initializing Firebase:
 const app = initializeApp(firebaseConfig); // Connect this project with Firebase's products.
 const database = getDatabase(app); // Connect this project to the Realtime Database service.
-const analytics = getAnalytics(app); // Connect this project with Google Analytics.
 
 // Exporting Firebase variables:
 export { app, database };

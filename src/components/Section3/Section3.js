@@ -6,7 +6,7 @@ const Section3 = ({ title }) => {
             <h1 className='section-3__title'>{title}</h1>
             <div className="section-3__benefits">
                 <div className="section-3__benefits__benefit">
-                    <img className="section-3__benefits__benefit__img" src='images/ic-calendar-clock.svg' />
+                    <img className="section-3__benefits__benefit__img" src='images/ic-calendar-clock.svg' alt='Ícone de calendário' />
                     <div className="section-3__benefits__benefit__texts">
                         <h2 className="section-3__benefits__benefit__texts__title">Decida sua jornada</h2>
                         <p className="section-3__benefits__benefit__texts__text">
@@ -16,7 +16,7 @@ const Section3 = ({ title }) => {
                     </div>
                 </div>
                 <div className="section-3__benefits__benefit">
-                    <img className="section-3__benefits__benefit__img" src='images/ic-payments.svg' />
+                    <img className="section-3__benefits__benefit__img" src='images/ic-payments.svg' alt='Ícone de dinheiro' />
                     <div className="section-3__benefits__benefit__texts">
                         <h2 className="section-3__benefits__benefit__texts__title">Ganhe por viagem</h2>
                         <p className="section-3__benefits__benefit__texts__text">
@@ -27,7 +27,7 @@ const Section3 = ({ title }) => {
                     </div>
                 </div>
                 <div className="section-3__benefits__benefit">
-                    <img className="section-3__benefits__benefit__img" src='images/ic_partner_exchange.svg' />
+                    <img className="section-3__benefits__benefit__img" src='images/ic_partner_exchange.svg'  alt='Ícone de colaboração' />
                     <div className="section-3__benefits__benefit__texts">
                         <h2 className="section-3__benefits__benefit__texts__title">Parceiros dos trabalhadores</h2>
                         <p className="section-3__benefits__benefit__texts__text">
