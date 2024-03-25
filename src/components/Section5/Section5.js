@@ -17,7 +17,7 @@ const Section5 = ({ title }) => {
                     <p className='section-5__div__texts__text'>
                         A nossa rede de motoristas está distribuída conforme  demonstra o mapa ao lado. 
                         Estamos numa constante expansão das nossas operações, onde miramos em tornar o 
-                        transporte urbano em Portugal acessível aos clientes e justo aos motoristas. 
+                        transporte urbano em Portugal barato aos clientes e justo aos motoristas. 
                     </p>
                 </div>
             </div>
