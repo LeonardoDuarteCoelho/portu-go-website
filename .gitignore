@@ -9,7 +9,8 @@
 /coverage
 
 # production
-/build
+# /build --> For GitHub's deploy to Firebase on merge feature to work, Git needs access to this!
+
 
 # misc
 .DS_Store
