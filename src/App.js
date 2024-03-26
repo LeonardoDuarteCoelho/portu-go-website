@@ -18,6 +18,11 @@ const App = () => {
       <Section1 
         title={'Rápido, fácil e justo'}
       />
+      <Section2 
+        title={'Quem somos nós?'}
+        imgSrc={'images/pexels-element-digital-1051071.jpg'}
+        imgName={'Mulher a conduzir'}
+      />
       <div className='app__gradient-1'>
         <Section3 
           title={'Conduza e seja seu próprio patrão!'}
