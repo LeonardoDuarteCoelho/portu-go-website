@@ -28,13 +28,15 @@
 
 .header-scrolling {
     @extend .header;
-    background: variables.$indigo_7;
+    background-color: red
+    // background: variables.$indigo_7;
 }
 
 // The class that will slide the header out of view
 .header-top {
     @extend .header;
-    background: variables.$transparent;
+    background-color: red;
+    // background: variables.$transparent;
 }
 
 
