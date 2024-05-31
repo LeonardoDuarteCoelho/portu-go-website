@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.72d32ddb.css",
+    "main.css": "/static/css/main.f951fe23.css",
     "main.js": "/static/js/main.eebe3bd4.js",
     "static/js/787.937969f4.chunk.js": "/static/js/787.937969f4.chunk.js",
     "static/media/pexels-andrea-piacquadio-787472.jpg": "/static/media/pexels-andrea-piacquadio-787472.53558c5d941ca1b78c75.jpg",
     "index.html": "/index.html",
-    "main.72d32ddb.css.map": "/static/css/main.72d32ddb.css.map",
+    "main.f951fe23.css.map": "/static/css/main.f951fe23.css.map",
     "main.eebe3bd4.js.map": "/static/js/main.eebe3bd4.js.map",
     "787.937969f4.chunk.js.map": "/static/js/787.937969f4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.72d32ddb.css",
+    "static/css/main.f951fe23.css",
     "static/js/main.eebe3bd4.js"
   ]
 }
