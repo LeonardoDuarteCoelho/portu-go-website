@@ -1,4 +1,5 @@
 import './App.scss';
+import 'normalize.css'
 import Footer from './components/Footer/Footer.js';
 import Header from './components/Header/Header.js';
 import Section1 from './components/Section1/Section1.js';
